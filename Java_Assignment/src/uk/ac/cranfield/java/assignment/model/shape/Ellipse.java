@@ -1,5 +1,7 @@
 package uk.ac.cranfield.java.assignment.model.shape;
 
+import java.awt.Color;
+
 
 /**
  * The class Ellipse represents a geometric shape. An Ellipse is defined by
@@ -32,12 +34,13 @@ public class Ellipse extends MyShape
      * @param x integer representing the x - coordinate of the centre of Ellipse.
      * @param y integer representing the y - coordinate of the centre of Ellipse.
      */
-    public Ellipse(double minorRadius, double majorRadius, int x, int y)
+    public Ellipse(double minorRadius, double majorRadius, int x, int y, Color color)
     {
         this.minorRadius = minorRadius;
         this.majorRadius = majorRadius;
         this.x = x;
         this.y = y;
+        this.color = color;
     }
     
     /**

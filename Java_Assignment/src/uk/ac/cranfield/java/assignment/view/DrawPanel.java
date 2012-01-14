@@ -2,11 +2,12 @@ package uk.ac.cranfield.java.assignment.view;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
 
-import uk.ac.cranfield.java.assignment.controller.ShapeDrawer;
 import uk.ac.cranfield.java.assignment.controller.SortingDelayWorker;
+import uk.ac.cranfield.java.assignment.controller.draw.ShapeDrawer;
 
 
 public class DrawPanel extends JPanel
@@ -33,6 +34,6 @@ public class DrawPanel extends JPanel
         super.paintComponent(g);
         
         if (drawer != null)
-            drawer.draw(g);
+            drawer.draw((Graphics2D) g);
     }
 }

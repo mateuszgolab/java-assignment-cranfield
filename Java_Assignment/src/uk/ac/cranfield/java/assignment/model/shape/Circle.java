@@ -1,12 +1,14 @@
 package uk.ac.cranfield.java.assignment.model.shape;
 
+import java.awt.Color;
+
 
 public class Circle extends Ellipse
 {
     
-    public Circle(double radius, int x, int y)
+    public Circle(double radius, int x, int y, Color c)
     {
-        super(radius, radius, x, y);
+        super(radius, radius, x, y, c);
     }
     
     public double getRadius()

@@ -1,6 +1,5 @@
 package uk.ac.cranfield.java.assignment.controller.utils;
 
-import uk.ac.cranfield.java.assignment.Sortable;
 
 /**
  * The class Sort provides sorting classic algorithms. Relies on the interface {@link Sortable} to compare different

@@ -10,12 +10,8 @@ import javax.swing.JSlider;
 import javax.swing.JTextField;
 import javax.swing.event.ChangeEvent;
 
-import uk.ac.cranfield.java.assignment.controller.RectangleDrawer;
-import uk.ac.cranfield.java.assignment.controller.utils.RandomColorGenerator;
-import uk.ac.cranfield.java.assignment.controller.utils.RandomNumbersGenerator;
-import uk.ac.cranfield.java.assignment.model.dialog.DialogClient;
-import uk.ac.cranfield.java.assignment.model.dialog.info.DialogInfo;
-import uk.ac.cranfield.java.assignment.model.shape.Rectangle;
+import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
+import uk.ac.cranfield.java.assignment.model.info.RectangleDialogInfo;
 import uk.ac.cranfield.java.assignment.view.DrawPanel;
 
 import com.jgoodies.forms.layout.FormLayout;
@@ -23,7 +19,6 @@ import com.jgoodies.forms.layout.FormLayout;
 
 public class RectangleDisplayDialog extends DisplayDialog
 {
-    
     
     private JLabel minLengthLabel;
     private JLabel maxLengthLabel;
@@ -37,12 +32,12 @@ public class RectangleDisplayDialog extends DisplayDialog
     private JTextField maxLengthText;
     private JTextField minWidthText;
     private JTextField maxWidthText;
-    private Rectangle[] rectangles;
+    private RectangleDialogInfo info;
     
-    public RectangleDisplayDialog(Frame frame, String title, DialogClient dialogClient, DialogInfo info,
-            DrawPanel drawPanel)
+    public RectangleDisplayDialog(Frame frame, String title, DialogClient dialogClient, DrawPanel panel)
     {
-        super(frame, title, dialogClient, info, drawPanel);
+        super(frame, title, dialogClient, panel);
+        this.info = new RectangleDialogInfo();
     }
     
     @Override
@@ -51,7 +46,6 @@ public class RectangleDisplayDialog extends DisplayDialog
         layout = new FormLayout("5dlu, pref, 10dlu,pref , 10dlu, fill:pref:grow,10dlu, pref, 5dlu, pref",
                 "5dlu, pref, 5dlu, pref,  5dlu, pref, 5dlu, pref,  5dlu, pref, 5dlu");
         panel.setLayout(layout);
-        // panel.setLayout(new GridLayout(4, 2));
         
     }
     
@@ -60,7 +54,6 @@ public class RectangleDisplayDialog extends DisplayDialog
     {
         super.create();
         
-        okButton.addActionListener(new OkButtonAction());
         
         minLengthLabel = new JLabel("minimal length");
         maxLengthLabel = new JLabel("maximal length");
@@ -107,6 +100,7 @@ public class RectangleDisplayDialog extends DisplayDialog
     protected void addListeners()
     {
         super.addListeners();
+        okButton.addActionListener(new OkButtonAction());
         minLength.addChangeListener(this);
         maxLength.addChangeListener(this);
         minWidth.addChangeListener(this);
@@ -140,20 +134,14 @@ public class RectangleDisplayDialog extends DisplayDialog
         {
             if (areRangesOk())
             {
-                rectangles = new Rectangle[number.getValue()];
-                
-                for (int i = 0; i < rectangles.length; i++)
-                {
-                    double width = RandomNumbersGenerator.getRandomDouble(minWidth.getValue(), maxWidth.getValue());
-                    double length = RandomNumbersGenerator.getRandomDouble(minLength.getValue(), maxLength.getValue());
-                    int x = RandomNumbersGenerator.getRandomInt((int) (drawPanel.getSize().width - width));
-                    int y = RandomNumbersGenerator.getRandomInt((int) (drawPanel.getSize().height - length));
-                    
-                    rectangles[i] = new Rectangle(width, length, x, y, RandomColorGenerator.getRandomColor());
-                }
+                info.setNumberOfObjects(number.getValue());
+                info.setMaxLength(maxLength.getValue());
+                info.setMinLength(minLength.getValue());
+                info.setMaxWidth(maxWidth.getValue());
+                info.setMinWidth(minWidth.getValue());
                 
                 dispose();
-                drawPanel.setDrawer(new RectangleDrawer(rectangles));
+                client.dialogDimissed(RectangleDisplayDialog.this, info);
             }
             else
             {
