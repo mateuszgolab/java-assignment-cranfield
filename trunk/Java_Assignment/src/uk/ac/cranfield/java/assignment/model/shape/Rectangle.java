@@ -1,6 +1,7 @@
 package uk.ac.cranfield.java.assignment.model.shape;
 
 import java.awt.Color;
+import java.io.Serializable;
 
 /**
  * The class Rectangle represents a geometric shape. A Rectangle is defined by
@@ -10,7 +11,7 @@ import java.awt.Color;
  * @version 1.1
  * @see MyShape
  */
-public class Rectangle extends MyShape
+public class Rectangle extends MyShape implements Serializable
 {
     
     

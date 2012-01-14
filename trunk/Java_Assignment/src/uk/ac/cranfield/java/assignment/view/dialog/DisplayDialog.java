@@ -12,13 +12,11 @@ import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.JTextField;
 import javax.swing.event.ChangeListener;
-import javax.swing.text.NumberFormatter;
 
+import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
 import uk.ac.cranfield.java.assignment.controller.utils.ComponentFactory;
-import uk.ac.cranfield.java.assignment.model.dialog.DialogClient;
-import uk.ac.cranfield.java.assignment.model.dialog.NDialog;
-import uk.ac.cranfield.java.assignment.model.dialog.info.DialogInfo;
 import uk.ac.cranfield.java.assignment.view.DrawPanel;
+import uk.ac.cranfield.java.assignment.view.NDialog;
 
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
@@ -34,26 +32,23 @@ public abstract class DisplayDialog extends NDialog implements ChangeListener
     private JLabel numberLabel;
     protected JSlider number;
     protected CellConstraints cc;
-    protected DialogInfo info;
     protected FormLayout layout;
     protected JPanel panel;
     protected JButton okButton;
     private JButton cancelButton;
     private JPanel southPanel;
-    protected DrawPanel drawPanel;
     protected ComponentFactory factory;
     protected JTextField numberText;
+    protected DrawPanel drawPanel;
     
-    private NumberFormatter integerFormatter;
     
-    public DisplayDialog(Frame frame, String title, DialogClient dialogClient, DialogInfo info, DrawPanel drawPanel)
+    public DisplayDialog(Frame frame, String title, DialogClient dialogClient, DrawPanel drawPanel)
     {
         super(frame, title + "s display", dialogClient, true);
         this.title = title;
-        this.info = info;
         this.panel = new JPanel();
-        this.southPanel = new JPanel();
         this.drawPanel = drawPanel;
+        this.southPanel = new JPanel();
         this.factory = new ComponentFactory();
         
         setLayout();
@@ -66,12 +61,7 @@ public abstract class DisplayDialog extends NDialog implements ChangeListener
         
     }
     
-    protected void setLayout()
-    {
-        layout = new FormLayout("5dlu, pref, 10dlu, pref, 10dlu, pref,10dlu, fill:pref:grow, 5dlu, pref",
-                "pref, 5dlu, pref, 5dlu, pref,  5dlu, pref");
-        panel.setLayout(layout);
-    }
+    protected abstract void setLayout();
     
     protected void create()
     {

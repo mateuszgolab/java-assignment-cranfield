@@ -2,7 +2,7 @@ package uk.ac.cranfield.java.assignment.model.shape;
 
 import java.awt.Color;
 
-import uk.ac.cranfield.java.assignment.Sortable;
+import uk.ac.cranfield.java.assignment.controller.utils.Sortable;
 
 /**
  * The abstract class MyShape is the root of the hierarchy of shapes. This class

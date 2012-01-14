@@ -1,7 +1,8 @@
-package uk.ac.cranfield.java.assignment.controller;
+package uk.ac.cranfield.java.assignment.controller.draw;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 import uk.ac.cranfield.java.assignment.controller.utils.Sort;
 import uk.ac.cranfield.java.assignment.model.shape.Rectangle;
@@ -20,7 +21,7 @@ public class RectangleDrawer extends ShapeDrawer
     }
     
     @Override
-    public void draw(Graphics graphics)
+    public void draw(Graphics2D graphics)
     {
         clearScreen(graphics);
         

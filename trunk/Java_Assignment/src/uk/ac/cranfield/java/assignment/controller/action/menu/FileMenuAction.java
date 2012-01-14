@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import uk.ac.cranfield.java.assignment.model.dialog.NDialog;
+import uk.ac.cranfield.java.assignment.view.NDialog;
 
 
 public class FileMenuAction extends AbstractAction {

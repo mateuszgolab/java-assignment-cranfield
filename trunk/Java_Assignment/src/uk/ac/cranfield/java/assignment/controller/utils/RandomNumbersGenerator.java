@@ -18,7 +18,7 @@ public class RandomNumbersGenerator
         return random.nextInt(max);
     }
     
-    public static Double getRandomDouble(int min, int max)
+    public static Double getRandomDouble(Integer min, Integer max)
     {
         return min + random.nextDouble() * (max - min);
     }
