@@ -21,7 +21,7 @@ public class Sort
      * Mistake fixed "tmp.compare(a[j - incr]) < 0" instead of
      * "tmp.compare(a[j] - incr) < 0"
      */
-    public static synchronized void shell_sort(Sortable[] a)
+    public static void shell_sort(Sortable[] a)
     {
         int n = a.length;
         int incr = n / 2;
