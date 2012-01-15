@@ -2,6 +2,7 @@ package uk.ac.cranfield.java.assignment.controller.utils;
 
 
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Toolkit;
 
 import javax.swing.JPanel;
@@ -31,6 +32,11 @@ public class FrameToolkit
     public static Dimension getPanelCenter(JPanel panel)
     {
         return new Dimension(panel.getWidth() / 2, panel.getHeight() / 2);
+    }
+    
+    public static Image getImage(String name)
+    {
+        return toolkit.getImage(name);
     }
     
 }

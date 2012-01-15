@@ -1,21 +1,21 @@
 package uk.ac.cranfield.java.assignment.view.menu;
 
-import java.awt.Frame;
-
 import javax.swing.JMenuBar;
 
 import uk.ac.cranfield.java.assignment.view.DrawPanel;
+import uk.ac.cranfield.java.assignment.view.MainFrame;
 
 
+@SuppressWarnings("serial")
 public class MainMenu extends JMenuBar
 {
     
     private FileMenu fileMenu;
     private DisplayMenu displayMenu;
-    private Frame parent;
+    private MainFrame parent;
     private DrawPanel drawPanel;
     
-    public MainMenu(Frame parent, DrawPanel drawPanel)
+    public MainMenu(MainFrame parent, DrawPanel drawPanel)
     {
         this.parent = parent;
         this.drawPanel = drawPanel;

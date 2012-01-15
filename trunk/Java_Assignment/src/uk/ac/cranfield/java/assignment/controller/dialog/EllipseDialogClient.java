@@ -2,7 +2,7 @@ package uk.ac.cranfield.java.assignment.controller.dialog;
 
 import java.awt.Dialog;
 
-import uk.ac.cranfield.java.assignment.controller.shape.EllipseController;
+import uk.ac.cranfield.java.assignment.controller.EllipseController;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomColorGenerator;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomNumbersGenerator;
 import uk.ac.cranfield.java.assignment.model.info.EllipseDialogInfo;
@@ -42,7 +42,7 @@ public class EllipseDialogClient implements DialogClient
             ellipses[i] = new Ellipse(minorRadius, majorRadius, x, y, RandomColorGenerator.getRandomColor());
         }
         
-        drawPanel.setController(new EllipseController(ellipses, new EllipseView()));
+        drawPanel.setControllerAndSort(new EllipseController(ellipses, new EllipseView()));
         
     }
     

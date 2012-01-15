@@ -5,51 +5,51 @@ import java.awt.BorderLayout;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JSlider;
 import javax.swing.JTextField;
 import javax.swing.event.ChangeListener;
 
 import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
-import uk.ac.cranfield.java.assignment.controller.utils.ComponentFactory;
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
-import uk.ac.cranfield.java.assignment.view.NDialog;
+import uk.ac.cranfield.java.assignment.controller.utils.TextFieldFactory;
+import uk.ac.cranfield.java.assignment.view.DimensionSlider;
 
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
 
+@SuppressWarnings("serial")
 public abstract class DisplayDialog extends NDialog implements ChangeListener
 {
     
+    protected static int MAX_RADIUS = 400;
     private static int MAX_SHAPES_NUMBER = 50;
     private static int MAJOR_TICK = 10;
     private static int MINOR_TICK = 5;
     private String title;
     private JLabel numberLabel;
-    protected JSlider number;
+    protected DimensionSlider number;
     protected CellConstraints cc;
     protected FormLayout layout;
     protected JPanel panel;
     protected JButton okButton;
     private JButton cancelButton;
     private JPanel southPanel;
-    protected ComponentFactory factory;
+    protected TextFieldFactory factory;
     protected JTextField numberText;
-    protected DrawPanel drawPanel;
     
     
-    public DisplayDialog(Frame frame, String title, DialogClient dialogClient, DrawPanel drawPanel)
+    public DisplayDialog(Frame frame, String title, DialogClient dialogClient)
     {
-        super(frame, title + "s display", dialogClient, true);
+        super(frame, title + "s display dialog", dialogClient, true);
         this.title = title;
         this.panel = new JPanel();
-        this.drawPanel = drawPanel;
         this.southPanel = new JPanel();
-        this.factory = new ComponentFactory();
+        this.factory = new TextFieldFactory();
         
         setLayout();
         create();
@@ -65,9 +65,9 @@ public abstract class DisplayDialog extends NDialog implements ChangeListener
     
     protected void create()
     {
-        numberLabel = new JLabel("number of " + title + "s");
-        number = factory.createSlider(0, MAX_SHAPES_NUMBER, MAX_SHAPES_NUMBER / 2, MINOR_TICK, MAJOR_TICK);
-        numberText = factory.createTextField(number.getValue());
+        numberLabel = new JLabel("Number of " + title + "s :");
+        number = new DimensionSlider(0, MAX_SHAPES_NUMBER, MAX_SHAPES_NUMBER / 2, MINOR_TICK, MAJOR_TICK);
+        numberText = factory.createIntegerTextField(number.getValue());
         
         
         okButton = new JButton("Ok");
@@ -87,9 +87,16 @@ public abstract class DisplayDialog extends NDialog implements ChangeListener
         southPanel.add(cancelButton);
     }
     
+    public void reset()
+    {
+        number.reset();
+        numberText.setText(Integer.toString(number.getValue()));
+    }
+    
     protected void addListeners()
     {
         number.addChangeListener(this);
+        addWindowListener(new DialogAdapter());
     }
     
     private class CancelButtonAction implements ActionListener
@@ -102,5 +109,16 @@ public abstract class DisplayDialog extends NDialog implements ChangeListener
         }
         
     }
+    
+    private class DialogAdapter extends WindowAdapter
+    {
+        
+        @Override
+        public void windowClosing(WindowEvent we)
+        {
+            dispose();
+        }
+    }
+    
     
 }

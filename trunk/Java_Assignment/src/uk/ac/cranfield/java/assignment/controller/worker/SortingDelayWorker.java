@@ -25,14 +25,16 @@ public class SortingDelayWorker extends SwingWorker<Void, Void>
     protected Void doInBackground() throws Exception
     {
         panel.repaint();
+        controller.sort();
         Thread.sleep(delay);
-        controller.sort(FrameToolkit.getPanelCenter(panel));
+        
         return null;
     }
     
     @Override
     public void done()
     {
+        controller.centralise(FrameToolkit.getPanelCenter(panel));
         panel.repaint();
     }
 }

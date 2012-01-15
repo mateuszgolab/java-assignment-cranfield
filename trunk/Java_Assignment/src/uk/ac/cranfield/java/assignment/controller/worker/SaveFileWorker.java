@@ -35,6 +35,7 @@ public class SaveFileWorker extends SwingWorker<Void, Void>
             OutputStream file = new FileOutputStream(filePath);
             OutputStream buffer = new BufferedOutputStream(file);
             ObjectOutput output = new ObjectOutputStream(buffer);
+            
             try
             {
                 output.writeObject(shapes);
@@ -47,7 +48,7 @@ public class SaveFileWorker extends SwingWorker<Void, Void>
         }
         catch (IOException ex)
         {
-            // fLogger.log(Level.SEVERE, "Cannot perform output.", ex);
+            JOptionPane.showMessageDialog(null, "Shapes could not be saved", "Error", JOptionPane.ERROR_MESSAGE);
         }
         
         return null;

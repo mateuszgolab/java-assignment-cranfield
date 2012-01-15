@@ -1,20 +1,22 @@
 package uk.ac.cranfield.java.assignment.controller.action.menu;
 
-import java.awt.Frame;
 import java.awt.event.ActionEvent;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 
 import uk.ac.cranfield.java.assignment.controller.worker.SaveFileWorker;
 import uk.ac.cranfield.java.assignment.view.DrawPanel;
+import uk.ac.cranfield.java.assignment.view.MainFrame;
 
 
+@SuppressWarnings("serial")
 public class SaveFileAction extends FileMenuAction
 {
     
-    public SaveFileAction(Frame parent, DrawPanel panel)
+    public SaveFileAction(MainFrame parent, DrawPanel panel)
     {
-        super(parent, "Save file", panel);
+        super(parent, "Save", new ImageIcon("icons/Save-icon.png"), panel);
     }
     
     @Override

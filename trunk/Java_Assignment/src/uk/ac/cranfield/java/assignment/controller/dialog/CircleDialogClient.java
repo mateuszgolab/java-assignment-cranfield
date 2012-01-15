@@ -2,7 +2,7 @@ package uk.ac.cranfield.java.assignment.controller.dialog;
 
 import java.awt.Dialog;
 
-import uk.ac.cranfield.java.assignment.controller.shape.CircleController;
+import uk.ac.cranfield.java.assignment.controller.CircleController;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomColorGenerator;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomNumbersGenerator;
 import uk.ac.cranfield.java.assignment.model.info.CircleDialogInfo;
@@ -39,7 +39,7 @@ public class CircleDialogClient implements DialogClient
             circles[i] = new Circle(radius, x, y, RandomColorGenerator.getRandomColor());
         }
         
-        drawPanel.setController(new CircleController(circles, new CircleView()));
+        drawPanel.setControllerAndSort(new CircleController(circles, new CircleView()));
         
     }
     

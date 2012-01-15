@@ -12,31 +12,34 @@ import javax.swing.event.ChangeEvent;
 
 import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
 import uk.ac.cranfield.java.assignment.model.info.EllipseDialogInfo;
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
+import uk.ac.cranfield.java.assignment.view.DimensionSlider;
 
 import com.jgoodies.forms.layout.FormLayout;
 
 
+@SuppressWarnings("serial")
 public class EllipseDisplayDialog extends DisplayDialog
 {
     
+    private static int MAJOR_TICK = 100;
+    private static int MINOR_TICK = 50;
     private JLabel minMinorRadiusLabel;
     private JLabel maxMinorRadiusLabel;
     private JLabel minMajorRadiusLabel;
     private JLabel maxMajorRadiusLabel;
-    private JSlider minMinorRadius;
-    private JSlider maxMinorRadius;
-    private JSlider minMajorRadius;
-    private JSlider maxMajorRadius;
+    private DimensionSlider minMinorRadius;
+    private DimensionSlider maxMinorRadius;
+    private DimensionSlider minMajorRadius;
+    private DimensionSlider maxMajorRadius;
     private JTextField minMinorRadiusText;
     private JTextField maxMinorRadiusText;
     private JTextField minMajorRadiusText;
     private JTextField maxMajorRadiusText;
     private EllipseDialogInfo info;
     
-    public EllipseDisplayDialog(Frame frame, String title, DialogClient dialogClient, DrawPanel drawPanel)
+    public EllipseDisplayDialog(Frame frame, String title, DialogClient dialogClient)
     {
-        super(frame, title, dialogClient, drawPanel);
+        super(frame, title, dialogClient);
         this.info = new EllipseDialogInfo();
     }
     
@@ -56,21 +59,21 @@ public class EllipseDisplayDialog extends DisplayDialog
         super.create();
         
         
-        minMinorRadiusLabel = new JLabel("minimal minor radius");
-        maxMinorRadiusLabel = new JLabel("maximal minor radius");
-        minMajorRadiusLabel = new JLabel("minimal major radius");
-        maxMajorRadiusLabel = new JLabel("maximal major radius");
+        minMinorRadiusLabel = new JLabel("Minimal minor radius :");
+        maxMinorRadiusLabel = new JLabel("Maximal minor radius :");
+        minMajorRadiusLabel = new JLabel("Minimal major radius :");
+        maxMajorRadiusLabel = new JLabel("Maximal major radius :");
         
         
-        minMinorRadius = factory.createSlider(0, drawPanel.getHeight() / 2, 0, 50, 100);
-        maxMinorRadius = factory.createSlider(0, drawPanel.getHeight() / 2, drawPanel.getHeight() / 4, 50, 100);
-        minMajorRadius = factory.createSlider(0, drawPanel.getWidth() / 2, 0, 100, 200);
-        maxMajorRadius = factory.createSlider(0, drawPanel.getWidth() / 2, drawPanel.getWidth() / 4, 50, 100);
+        minMinorRadius = new DimensionSlider(0, MAX_RADIUS, 0, MINOR_TICK, MAJOR_TICK);
+        maxMinorRadius = new DimensionSlider(0, MAX_RADIUS, MAX_RADIUS / 4, MINOR_TICK, MAJOR_TICK);
+        minMajorRadius = new DimensionSlider(0, MAX_RADIUS, 0, MINOR_TICK, MAJOR_TICK);
+        maxMajorRadius = new DimensionSlider(0, MAX_RADIUS, MAX_RADIUS / 2, MINOR_TICK, MAJOR_TICK);
         
-        minMinorRadiusText = factory.createTextField(minMinorRadius.getValue());
-        maxMinorRadiusText = factory.createTextField(maxMinorRadius.getValue());
-        minMajorRadiusText = factory.createTextField(minMinorRadius.getValue());
-        maxMajorRadiusText = factory.createTextField(maxMinorRadius.getValue());
+        minMinorRadiusText = factory.createDecimalTextField(minMinorRadius.getValue());
+        maxMinorRadiusText = factory.createDecimalTextField(maxMinorRadius.getValue());
+        minMajorRadiusText = factory.createDecimalTextField(minMajorRadius.getValue());
+        maxMajorRadiusText = factory.createDecimalTextField(maxMajorRadius.getValue());
         
         
     }
@@ -98,6 +101,23 @@ public class EllipseDisplayDialog extends DisplayDialog
     }
     
     @Override
+    public void reset()
+    {
+        super.reset();
+        
+        minMinorRadius.reset();
+        maxMinorRadius.reset();
+        minMajorRadius.reset();
+        maxMajorRadius.reset();
+        
+        minMinorRadiusText.setText(Double.toString(minMinorRadius.getValue()));
+        maxMinorRadiusText.setText(Double.toString(maxMinorRadius.getValue()));
+        minMajorRadiusText.setText(Double.toString(minMajorRadius.getValue()));
+        maxMajorRadiusText.setText(Double.toString(maxMajorRadius.getValue()));
+    }
+    
+    
+    @Override
     protected void addListeners()
     {
         super.addListeners();
@@ -117,13 +137,13 @@ public class EllipseDisplayDialog extends DisplayDialog
             if (source.equals(number))
                 numberText.setText(Integer.toString(number.getValue()));
             else if (source.equals(minMinorRadius))
-                minMinorRadiusText.setText(Integer.toString(minMinorRadius.getValue()));
+                minMinorRadiusText.setText(Double.toString(minMinorRadius.getValue()));
             else if (source.equals(maxMinorRadius))
-                maxMinorRadiusText.setText(Integer.toString(maxMinorRadius.getValue()));
+                maxMinorRadiusText.setText(Double.toString(maxMinorRadius.getValue()));
             else if (source.equals(minMajorRadius))
-                minMajorRadiusText.setText(Integer.toString(minMajorRadius.getValue()));
+                minMajorRadiusText.setText(Double.toString(minMajorRadius.getValue()));
             else if (source.equals(maxMajorRadius))
-                maxMajorRadiusText.setText(Integer.toString(maxMajorRadius.getValue()));
+                maxMajorRadiusText.setText(Double.toString(maxMajorRadius.getValue()));
         }
     }
     

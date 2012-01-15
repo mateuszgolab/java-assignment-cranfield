@@ -2,7 +2,7 @@ package uk.ac.cranfield.java.assignment.controller.dialog;
 
 import java.awt.Dialog;
 
-import uk.ac.cranfield.java.assignment.controller.shape.RectangleController;
+import uk.ac.cranfield.java.assignment.controller.RectangleController;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomColorGenerator;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomNumbersGenerator;
 import uk.ac.cranfield.java.assignment.model.info.RectangleDialogInfo;
@@ -40,7 +40,7 @@ public class RectangleDialogClient implements DialogClient
             rectangles[i] = new Rectangle(width, length, x, y, RandomColorGenerator.getRandomColor());
         }
         
-        drawPanel.setController(new RectangleController(rectangles, new RectangleView()));
+        drawPanel.setControllerAndSort(new RectangleController(rectangles, new RectangleView()));
         
     }
     

@@ -2,6 +2,7 @@ package uk.ac.cranfield.java.assignment.view.menu;
 
 import java.awt.Frame;
 
+import javax.swing.ImageIcon;
 import javax.swing.JMenu;
 
 import uk.ac.cranfield.java.assignment.controller.action.menu.ShapeMenuAction;
@@ -14,6 +15,7 @@ import uk.ac.cranfield.java.assignment.view.dialog.EllipseDisplayDialog;
 import uk.ac.cranfield.java.assignment.view.dialog.RectangleDisplayDialog;
 
 
+@SuppressWarnings("serial")
 public class DisplayMenu extends JMenu
 {
     
@@ -35,17 +37,16 @@ public class DisplayMenu extends JMenu
         super("Display");
         
         rectangleClient = new RectangleDialogClient(drawPanel);
-        rectangleDialog = new RectangleDisplayDialog(parent, rectangleTitle, rectangleClient, drawPanel);
-        add(new ShapeMenuAction(parent, rectangleTitle, rectangleDialog));
+        rectangleDialog = new RectangleDisplayDialog(parent, rectangleTitle, rectangleClient);
+        add(new ShapeMenuAction(parent, rectangleTitle, new ImageIcon("icons/rectangle.png"), rectangleDialog));
         
         ellipseClient = new EllipseDialogClient(drawPanel);
-        ellipseDialog = new EllipseDisplayDialog(parent, ellipseTitle, ellipseClient, drawPanel);
-        add(new ShapeMenuAction(parent, ellipseTitle, ellipseDialog));
+        ellipseDialog = new EllipseDisplayDialog(parent, ellipseTitle, ellipseClient);
+        add(new ShapeMenuAction(parent, ellipseTitle, new ImageIcon("icons/ellipse.png"), ellipseDialog));
         
         circleClient = new CircleDialogClient(drawPanel);
-        circleDialog = new CircleDisplayDialog(parent, circleTitle, circleClient, drawPanel);
-        add(new ShapeMenuAction(parent, circleTitle, circleDialog));
+        circleDialog = new CircleDisplayDialog(parent, circleTitle, circleClient);
+        add(new ShapeMenuAction(parent, circleTitle, new ImageIcon("icons/circle.png"), circleDialog));
     }
-    
     
 }

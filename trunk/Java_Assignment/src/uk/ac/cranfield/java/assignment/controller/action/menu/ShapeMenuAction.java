@@ -4,24 +4,27 @@ import java.awt.Frame;
 import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
+import javax.swing.Icon;
 
-import uk.ac.cranfield.java.assignment.view.NDialog;
+import uk.ac.cranfield.java.assignment.view.dialog.DisplayDialog;
 
 
+@SuppressWarnings("serial")
 public class ShapeMenuAction extends AbstractAction
 {
     
-    private NDialog dialog;
+    private DisplayDialog dialog;
     
-    public ShapeMenuAction(Frame parent, String title, NDialog dialog)
+    public ShapeMenuAction(Frame parent, String title, Icon icon, DisplayDialog dialog)
     {
-        super(title);
+        super(title, icon);
         this.dialog = dialog;
     }
     
     @Override
     public void actionPerformed(ActionEvent e)
     {
+        dialog.reset();
         dialog.show();
     }
     
