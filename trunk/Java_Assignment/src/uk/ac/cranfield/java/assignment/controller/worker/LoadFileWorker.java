@@ -9,9 +9,9 @@ import java.io.ObjectInputStream;
 
 import javax.swing.SwingWorker;
 
-import uk.ac.cranfield.java.assignment.controller.draw.CircleController;
-import uk.ac.cranfield.java.assignment.controller.draw.EllipseController;
-import uk.ac.cranfield.java.assignment.controller.draw.RectangleController;
+import uk.ac.cranfield.java.assignment.controller.shape.CircleController;
+import uk.ac.cranfield.java.assignment.controller.shape.EllipseController;
+import uk.ac.cranfield.java.assignment.controller.shape.RectangleController;
 import uk.ac.cranfield.java.assignment.model.shape.Circle;
 import uk.ac.cranfield.java.assignment.model.shape.Ellipse;
 import uk.ac.cranfield.java.assignment.model.shape.MyShape;
