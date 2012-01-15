@@ -7,7 +7,8 @@ import uk.ac.cranfield.java.assignment.controller.interfaces.Sortable;
  * The class Sort provides sorting classic algorithms. Relies on the interface {@link Sortable} to compare different
  * elements.
  * @author
- * @version 1.0
+ * @version 1.1
+ * shell_sort algorithm corrected ( tmp.compare(a[j - incr]) instead of tmp.compare(a[j] - incr)
  * @see Sortable
  */
 public class Sort

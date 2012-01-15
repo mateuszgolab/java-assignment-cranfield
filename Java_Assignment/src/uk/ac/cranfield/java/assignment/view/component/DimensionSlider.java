@@ -20,6 +20,16 @@ public class DimensionSlider extends JSlider
         setPaintTrack(true);
     }
     
+    public DimensionSlider(int min, int max, int init, int majorTick)
+    {
+        super(min, max, init);
+        this.initValue = init;
+        setMajorTickSpacing(majorTick);
+        setPaintLabels(true);
+        setPaintTicks(true);
+        setPaintTrack(true);
+    }
+    
     public void reset()
     {
         setValue(initValue);

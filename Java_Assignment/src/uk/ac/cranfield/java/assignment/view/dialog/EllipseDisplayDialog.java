@@ -10,7 +10,8 @@ import javax.swing.JSlider;
 import javax.swing.JTextField;
 import javax.swing.event.ChangeEvent;
 
-import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
+import uk.ac.cranfield.java.assignment.controller.interfaces.DialogClient;
+import uk.ac.cranfield.java.assignment.controller.utils.TextFieldFactory;
 import uk.ac.cranfield.java.assignment.model.info.EllipseDialogInfo;
 import uk.ac.cranfield.java.assignment.view.component.DimensionSlider;
 
@@ -65,15 +66,15 @@ public class EllipseDisplayDialog extends DisplayDialog
         maxMajorRadiusLabel = new JLabel("Maximal major radius :");
         
         
-        minMinorRadius = new DimensionSlider(0, MAX_RADIUS, 0, MINOR_TICK, MAJOR_TICK);
-        maxMinorRadius = new DimensionSlider(0, MAX_RADIUS, MAX_RADIUS / 4, MINOR_TICK, MAJOR_TICK);
-        minMajorRadius = new DimensionSlider(0, MAX_RADIUS, 0, MINOR_TICK, MAJOR_TICK);
-        maxMajorRadius = new DimensionSlider(0, MAX_RADIUS, MAX_RADIUS / 2, MINOR_TICK, MAJOR_TICK);
+        minMinorRadius = new DimensionSlider(1, MAX_RADIUS, 1, MINOR_TICK, MAJOR_TICK);
+        maxMinorRadius = new DimensionSlider(1, MAX_RADIUS, MAX_RADIUS / 4, MINOR_TICK, MAJOR_TICK);
+        minMajorRadius = new DimensionSlider(1, MAX_RADIUS, 1, MINOR_TICK, MAJOR_TICK);
+        maxMajorRadius = new DimensionSlider(1, MAX_RADIUS, MAX_RADIUS / 2, MINOR_TICK, MAJOR_TICK);
         
-        minMinorRadiusText = factory.createDecimalTextField(minMinorRadius.getValue());
-        maxMinorRadiusText = factory.createDecimalTextField(maxMinorRadius.getValue());
-        minMajorRadiusText = factory.createDecimalTextField(minMajorRadius.getValue());
-        maxMajorRadiusText = factory.createDecimalTextField(maxMajorRadius.getValue());
+        minMinorRadiusText = TextFieldFactory.createDecimalTextField(minMinorRadius.getValue());
+        maxMinorRadiusText = TextFieldFactory.createDecimalTextField(maxMinorRadius.getValue());
+        minMajorRadiusText = TextFieldFactory.createDecimalTextField(minMajorRadius.getValue());
+        maxMajorRadiusText = TextFieldFactory.createDecimalTextField(maxMajorRadius.getValue());
         
         
     }
@@ -162,7 +163,7 @@ public class EllipseDisplayDialog extends DisplayDialog
                 info.setMinMajorRadius(minMajorRadius.getValue());
                 
                 dispose();
-                client.dialogDimissed(EllipseDisplayDialog.this, info);
+                client.dialogDismissed(EllipseDisplayDialog.this, info);
             }
             else
             {

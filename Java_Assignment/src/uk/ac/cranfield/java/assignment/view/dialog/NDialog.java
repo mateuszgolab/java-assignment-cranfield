@@ -6,7 +6,7 @@ import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.Point;
 
-import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
+import uk.ac.cranfield.java.assignment.controller.interfaces.DialogClient;
 
 /**
  * Extension of AWT's Dialog class including information about the client.

@@ -10,7 +10,8 @@ import javax.swing.JSlider;
 import javax.swing.JTextField;
 import javax.swing.event.ChangeEvent;
 
-import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
+import uk.ac.cranfield.java.assignment.controller.interfaces.DialogClient;
+import uk.ac.cranfield.java.assignment.controller.utils.TextFieldFactory;
 import uk.ac.cranfield.java.assignment.model.info.RectangleDialogInfo;
 import uk.ac.cranfield.java.assignment.view.component.DimensionSlider;
 
@@ -21,8 +22,8 @@ import com.jgoodies.forms.layout.FormLayout;
 public class RectangleDisplayDialog extends DisplayDialog
 {
     
-    private static int MAX_WIDTH = 800;
-    private static int MAX_HEIGHT = 400;
+    private static int MAX_WIDTH = 801;
+    private static int MAX_HEIGHT = 601;
     private static int MAJOR_HEIGHT_TICK = 100;
     private static int MINOR_HEIGHT_TICK = 50;
     private static int MAJOR_WIDTH_TICK = 200;
@@ -67,15 +68,15 @@ public class RectangleDisplayDialog extends DisplayDialog
         minWidthLabel = new JLabel("Minimal width :");
         maxWidthLabel = new JLabel("Maximal width :");
         
-        minLength = new DimensionSlider(0, MAX_HEIGHT, 0, MINOR_HEIGHT_TICK, MAJOR_HEIGHT_TICK);
-        maxLength = new DimensionSlider(0, MAX_HEIGHT, MAX_HEIGHT / 2, MINOR_HEIGHT_TICK, MAJOR_HEIGHT_TICK);
-        minWidth = new DimensionSlider(0, MAX_WIDTH, 0, MINOR_WIDTH_TICK, MAJOR_WIDTH_TICK);
-        maxWidth = new DimensionSlider(0, MAX_WIDTH, MAX_WIDTH / 2, MINOR_WIDTH_TICK, MAJOR_WIDTH_TICK);
+        minLength = new DimensionSlider(1, MAX_HEIGHT, 1, MINOR_HEIGHT_TICK, MAJOR_HEIGHT_TICK);
+        maxLength = new DimensionSlider(1, MAX_HEIGHT, MAX_HEIGHT / 2, MINOR_HEIGHT_TICK, MAJOR_HEIGHT_TICK);
+        minWidth = new DimensionSlider(1, MAX_WIDTH, 1, MINOR_WIDTH_TICK, MAJOR_WIDTH_TICK);
+        maxWidth = new DimensionSlider(1, MAX_WIDTH, MAX_WIDTH / 2, MINOR_WIDTH_TICK, MAJOR_WIDTH_TICK);
         
-        minLengthText = factory.createDecimalTextField(minLength.getValue());
-        maxLengthText = factory.createDecimalTextField(maxLength.getValue());
-        minWidthText = factory.createDecimalTextField(minWidth.getValue());
-        maxWidthText = factory.createDecimalTextField(maxWidth.getValue());
+        minLengthText = TextFieldFactory.createDecimalTextField(minLength.getValue());
+        maxLengthText = TextFieldFactory.createDecimalTextField(maxLength.getValue());
+        minWidthText = TextFieldFactory.createDecimalTextField(minWidth.getValue());
+        maxWidthText = TextFieldFactory.createDecimalTextField(maxWidth.getValue());
         
         
     }
@@ -163,7 +164,7 @@ public class RectangleDisplayDialog extends DisplayDialog
                 info.setMinWidth(minWidth.getValue());
                 
                 dispose();
-                client.dialogDimissed(RectangleDisplayDialog.this, info);
+                client.dialogDismissed(RectangleDisplayDialog.this, info);
             }
             else
             {

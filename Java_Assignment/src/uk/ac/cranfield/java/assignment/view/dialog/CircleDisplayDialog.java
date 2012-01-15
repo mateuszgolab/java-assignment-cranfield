@@ -10,7 +10,8 @@ import javax.swing.JSlider;
 import javax.swing.JTextField;
 import javax.swing.event.ChangeEvent;
 
-import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
+import uk.ac.cranfield.java.assignment.controller.interfaces.DialogClient;
+import uk.ac.cranfield.java.assignment.controller.utils.TextFieldFactory;
 import uk.ac.cranfield.java.assignment.model.info.CircleDialogInfo;
 import uk.ac.cranfield.java.assignment.view.component.DimensionSlider;
 
@@ -55,11 +56,11 @@ public class CircleDisplayDialog extends DisplayDialog
         minRadiusLabel = new JLabel("Minimal radius :");
         maxRadiusLabel = new JLabel("Maximal radius :");
         
-        minRadius = new DimensionSlider(0, MAX_RADIUS, 0, MINOR_TICK, MAJOR_TICK);
-        maxRadius = new DimensionSlider(0, MAX_RADIUS, MAX_RADIUS / 2, MINOR_TICK, MAJOR_TICK);
+        minRadius = new DimensionSlider(1, MAX_RADIUS, 1, MINOR_TICK, MAJOR_TICK);
+        maxRadius = new DimensionSlider(1, MAX_RADIUS, MAX_RADIUS / 2, MINOR_TICK, MAJOR_TICK);
         
-        minRadiusText = factory.createDecimalTextField(minRadius.getValue());
-        maxRadiusText = factory.createDecimalTextField(maxRadius.getValue());
+        minRadiusText = TextFieldFactory.createDecimalTextField(minRadius.getValue());
+        maxRadiusText = TextFieldFactory.createDecimalTextField(maxRadius.getValue());
         
     }
     
@@ -127,7 +128,7 @@ public class CircleDisplayDialog extends DisplayDialog
                 info.setMinRadius(minRadius.getValue());
                 
                 dispose();
-                client.dialogDimissed(CircleDisplayDialog.this, info);
+                client.dialogDismissed(CircleDisplayDialog.this, info);
             }
             else
             {
