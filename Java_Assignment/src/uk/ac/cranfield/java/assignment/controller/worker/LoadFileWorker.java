@@ -7,11 +7,13 @@ import java.io.InputStream;
 import java.io.ObjectInput;
 import java.io.ObjectInputStream;
 
+import javax.swing.JOptionPane;
 import javax.swing.SwingWorker;
 
-import uk.ac.cranfield.java.assignment.controller.shape.CircleController;
-import uk.ac.cranfield.java.assignment.controller.shape.EllipseController;
-import uk.ac.cranfield.java.assignment.controller.shape.RectangleController;
+import uk.ac.cranfield.java.assignment.controller.CircleController;
+import uk.ac.cranfield.java.assignment.controller.EllipseController;
+import uk.ac.cranfield.java.assignment.controller.RectangleController;
+import uk.ac.cranfield.java.assignment.controller.utils.FrameToolkit;
 import uk.ac.cranfield.java.assignment.model.shape.Circle;
 import uk.ac.cranfield.java.assignment.model.shape.Ellipse;
 import uk.ac.cranfield.java.assignment.model.shape.MyShape;
@@ -62,12 +64,15 @@ public class LoadFileWorker extends SwingWorker<Void, Void>
         }
         catch (ClassNotFoundException ex)
         {
-            // fLogger.log(Level.SEVERE, "Cannot perform input. Class not found.", ex);
+            JOptionPane.showMessageDialog(null, "Shapes could not be read from this file", "Error",
+                    JOptionPane.ERROR_MESSAGE);
         }
         catch (IOException ex)
         {
-            // fLogger.log(Level.SEVERE, "Cannot perform input.", ex);
+            JOptionPane.showMessageDialog(null, "Shapes could not be read from this file", "Error",
+                    JOptionPane.ERROR_MESSAGE);
         }
+        
         
         return null;
     }
@@ -75,6 +80,7 @@ public class LoadFileWorker extends SwingWorker<Void, Void>
     @Override
     public void done()
     {
+        panel.centralise(FrameToolkit.getPanelCenter(panel));
         panel.repaint();
         
     }

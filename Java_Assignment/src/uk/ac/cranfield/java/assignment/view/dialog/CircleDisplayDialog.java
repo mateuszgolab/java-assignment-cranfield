@@ -12,25 +12,28 @@ import javax.swing.event.ChangeEvent;
 
 import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
 import uk.ac.cranfield.java.assignment.model.info.CircleDialogInfo;
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
+import uk.ac.cranfield.java.assignment.view.DimensionSlider;
 
 import com.jgoodies.forms.layout.FormLayout;
 
 
+@SuppressWarnings("serial")
 public class CircleDisplayDialog extends DisplayDialog
 {
     
+    private static int MAJOR_TICK = 100;
+    private static int MINOR_TICK = 50;
     private JLabel minRadiusLabel;
     private JLabel maxRadiusLabel;
-    private JSlider minRadius;
-    private JSlider maxRadius;
+    private DimensionSlider minRadius;
+    private DimensionSlider maxRadius;
     private JTextField minRadiusText;
     private JTextField maxRadiusText;
     private CircleDialogInfo info;
     
-    public CircleDisplayDialog(Frame frame, String title, DialogClient dialogClient, DrawPanel drawPanel)
+    public CircleDisplayDialog(Frame frame, String title, DialogClient dialogClient)
     {
-        super(frame, title, dialogClient, drawPanel);
+        super(frame, title, dialogClient);
         this.info = new CircleDialogInfo();
     }
     
@@ -49,14 +52,14 @@ public class CircleDisplayDialog extends DisplayDialog
     {
         super.create();
         
-        minRadiusLabel = new JLabel("minimal radius");
-        maxRadiusLabel = new JLabel("maximal radius");
+        minRadiusLabel = new JLabel("Minimal radius :");
+        maxRadiusLabel = new JLabel("Maximal radius :");
         
-        minRadius = factory.createSlider(0, drawPanel.getHeight() / 2, 0, 50, 100);
-        maxRadius = factory.createSlider(0, drawPanel.getHeight() / 2, drawPanel.getHeight() / 4, 50, 100);
+        minRadius = new DimensionSlider(0, MAX_RADIUS, 0, MINOR_TICK, MAJOR_TICK);
+        maxRadius = new DimensionSlider(0, MAX_RADIUS, MAX_RADIUS / 2, MINOR_TICK, MAJOR_TICK);
         
-        minRadiusText = factory.createTextField(minRadius.getValue());
-        maxRadiusText = factory.createTextField(maxRadius.getValue());
+        minRadiusText = factory.createDecimalTextField(minRadius.getValue());
+        maxRadiusText = factory.createDecimalTextField(maxRadius.getValue());
         
     }
     
@@ -72,6 +75,18 @@ public class CircleDisplayDialog extends DisplayDialog
         panel.add(maxRadiusText, cc.xy(4, 6));
         panel.add(maxRadius, cc.xy(6, 6));
         
+    }
+    
+    @Override
+    public void reset()
+    {
+        super.reset();
+        
+        minRadius.reset();
+        maxRadius.reset();
+        
+        minRadiusText.setText(Double.toString(minRadius.getValue()));
+        maxRadiusText.setText(Double.toString(maxRadius.getValue()));
     }
     
     @Override
@@ -92,9 +107,9 @@ public class CircleDisplayDialog extends DisplayDialog
             if (source.equals(number))
                 numberText.setText(Integer.toString(number.getValue()));
             else if (source.equals(minRadius))
-                minRadiusText.setText(Integer.toString(minRadius.getValue()));
+                minRadiusText.setText(Double.toString(minRadius.getValue()));
             else if (source.equals(maxRadius))
-                maxRadiusText.setText(Integer.toString(maxRadius.getValue()));
+                maxRadiusText.setText(Double.toString(maxRadius.getValue()));
         }
     }
     

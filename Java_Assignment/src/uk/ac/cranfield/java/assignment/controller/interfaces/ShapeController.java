@@ -22,7 +22,9 @@ public abstract class ShapeController
     
     public abstract void draw(Graphics2D graphics);
     
-    public void sort(Dimension centre)
+    public abstract void centralise(Dimension centre);
+    
+    public void sort()
     {
         Sort.shell_sort(getShapes());
     }

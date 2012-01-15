@@ -12,32 +12,40 @@ import javax.swing.event.ChangeEvent;
 
 import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
 import uk.ac.cranfield.java.assignment.model.info.RectangleDialogInfo;
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
+import uk.ac.cranfield.java.assignment.view.DimensionSlider;
 
 import com.jgoodies.forms.layout.FormLayout;
 
 
+@SuppressWarnings("serial")
 public class RectangleDisplayDialog extends DisplayDialog
 {
     
+    private static int MAX_WIDTH = 800;
+    private static int MAX_HEIGHT = 400;
+    private static int MAJOR_HEIGHT_TICK = 100;
+    private static int MINOR_HEIGHT_TICK = 50;
+    private static int MAJOR_WIDTH_TICK = 200;
+    private static int MINOR_WIDTH_TICK = 100;
     private JLabel minLengthLabel;
     private JLabel maxLengthLabel;
     private JLabel minWidthLabel;
     private JLabel maxWidthLabel;
-    private JSlider minLength;
-    private JSlider maxLength;
-    private JSlider minWidth;
-    private JSlider maxWidth;
+    private DimensionSlider minLength;
+    private DimensionSlider maxLength;
+    private DimensionSlider minWidth;
+    private DimensionSlider maxWidth;
     private JTextField minLengthText;
     private JTextField maxLengthText;
     private JTextField minWidthText;
     private JTextField maxWidthText;
     private RectangleDialogInfo info;
     
-    public RectangleDisplayDialog(Frame frame, String title, DialogClient dialogClient, DrawPanel panel)
+    public RectangleDisplayDialog(Frame frame, String title, DialogClient dialogClient)
     {
-        super(frame, title, dialogClient, panel);
+        super(frame, title, dialogClient);
         this.info = new RectangleDialogInfo();
+        
     }
     
     @Override
@@ -54,22 +62,20 @@ public class RectangleDisplayDialog extends DisplayDialog
     {
         super.create();
         
+        minLengthLabel = new JLabel("Minimal length :");
+        maxLengthLabel = new JLabel("Maximal length :");
+        minWidthLabel = new JLabel("Minimal width :");
+        maxWidthLabel = new JLabel("Maximal width :");
         
-        minLengthLabel = new JLabel("minimal length");
-        maxLengthLabel = new JLabel("maximal length");
-        minWidthLabel = new JLabel("minimal width");
-        maxWidthLabel = new JLabel("maximal width");
+        minLength = new DimensionSlider(0, MAX_HEIGHT, 0, MINOR_HEIGHT_TICK, MAJOR_HEIGHT_TICK);
+        maxLength = new DimensionSlider(0, MAX_HEIGHT, MAX_HEIGHT / 2, MINOR_HEIGHT_TICK, MAJOR_HEIGHT_TICK);
+        minWidth = new DimensionSlider(0, MAX_WIDTH, 0, MINOR_WIDTH_TICK, MAJOR_WIDTH_TICK);
+        maxWidth = new DimensionSlider(0, MAX_WIDTH, MAX_WIDTH / 2, MINOR_WIDTH_TICK, MAJOR_WIDTH_TICK);
         
-        
-        minLength = factory.createSlider(0, drawPanel.getHeight(), 0, 50, 100);
-        maxLength = factory.createSlider(0, drawPanel.getHeight(), drawPanel.getHeight() / 2, 50, 100);
-        minWidth = factory.createSlider(0, drawPanel.getWidth(), 0, 100, 200);
-        maxWidth = factory.createSlider(0, drawPanel.getWidth(), drawPanel.getWidth() / 2, 100, 200);
-        
-        minLengthText = factory.createTextField(minLength.getValue());
-        maxLengthText = factory.createTextField(maxLength.getValue());
-        minWidthText = factory.createTextField(minLength.getValue());
-        maxWidthText = factory.createTextField(maxLength.getValue());
+        minLengthText = factory.createDecimalTextField(minLength.getValue());
+        maxLengthText = factory.createDecimalTextField(maxLength.getValue());
+        minWidthText = factory.createDecimalTextField(minWidth.getValue());
+        maxWidthText = factory.createDecimalTextField(maxWidth.getValue());
         
         
     }
@@ -97,6 +103,22 @@ public class RectangleDisplayDialog extends DisplayDialog
     }
     
     @Override
+    public void reset()
+    {
+        super.reset();
+        
+        minLength.reset();
+        maxLength.reset();
+        minWidth.reset();
+        maxWidth.reset();
+        
+        minLengthText.setText(Double.toString(minLength.getValue()));
+        maxLengthText.setText(Double.toString(maxLength.getValue()));
+        minWidthText.setText(Double.toString(minWidth.getValue()));
+        maxWidthText.setText(Double.toString(maxWidth.getValue()));
+    }
+    
+    @Override
     protected void addListeners()
     {
         super.addListeners();
@@ -116,13 +138,13 @@ public class RectangleDisplayDialog extends DisplayDialog
             if (source.equals(number))
                 numberText.setText(Integer.toString(number.getValue()));
             else if (source.equals(minLength))
-                minLengthText.setText(Integer.toString(minLength.getValue()));
+                minLengthText.setText(Double.toString(minLength.getValue()));
             else if (source.equals(maxLength))
-                maxLengthText.setText(Integer.toString(maxLength.getValue()));
+                maxLengthText.setText(Double.toString(maxLength.getValue()));
             else if (source.equals(minWidth))
-                minWidthText.setText(Integer.toString(minWidth.getValue()));
+                minWidthText.setText(Double.toString(minWidth.getValue()));
             else if (source.equals(maxWidth))
-                maxWidthText.setText(Integer.toString(maxWidth.getValue()));
+                maxWidthText.setText(Double.toString(maxWidth.getValue()));
         }
     }
     
@@ -159,5 +181,6 @@ public class RectangleDisplayDialog extends DisplayDialog
         }
         
     }
+    
     
 }

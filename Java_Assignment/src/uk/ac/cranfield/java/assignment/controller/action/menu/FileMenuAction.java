@@ -3,23 +3,25 @@ package uk.ac.cranfield.java.assignment.controller.action.menu;
 import java.awt.Frame;
 
 import javax.swing.AbstractAction;
+import javax.swing.Icon;
 
-import uk.ac.cranfield.java.assignment.controller.file.OpenFileChooser;
+import uk.ac.cranfield.java.assignment.controller.file.FileChooser;
 import uk.ac.cranfield.java.assignment.view.DrawPanel;
 
 
+@SuppressWarnings("serial")
 public abstract class FileMenuAction extends AbstractAction
 {
     
-    protected OpenFileChooser fileChooser;
+    protected FileChooser fileChooser;
     protected Frame parent;
     protected DrawPanel drawPanel;
     
-    public FileMenuAction(Frame parent, String title, DrawPanel drawPanel)
+    public FileMenuAction(Frame parent, String title, Icon icon, DrawPanel drawPanel)
     {
-        super(title);
+        super(title, icon);
         this.parent = parent;
-        fileChooser = new OpenFileChooser();
+        fileChooser = new FileChooser();
         this.drawPanel = drawPanel;
     }
     

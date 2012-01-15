@@ -3,12 +3,13 @@ package uk.ac.cranfield.java.assignment.controller.file;
 import javax.swing.JFileChooser;
 
 
-public class OpenFileChooser extends JFileChooser
+@SuppressWarnings("serial")
+public class FileChooser extends JFileChooser
 {
     
     private ObjFileFilter filter;
     
-    public OpenFileChooser()
+    public FileChooser()
     {
         filter = new ObjFileFilter();
         setFileFilter(filter);

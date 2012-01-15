@@ -1,6 +1,7 @@
 package uk.ac.cranfield.java.assignment.view;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -13,10 +14,11 @@ import uk.ac.cranfield.java.assignment.controller.worker.SortingDelayWorker;
 import uk.ac.cranfield.java.assignment.model.shape.MyShape;
 
 
+@SuppressWarnings("serial")
 public class DrawPanel extends JPanel
 {
     
-    private static long SORT_DELAY_TIME = 1500;
+    private static long SORT_DELAY_TIME = 1000;
     private ShapeController controller;
     
     public DrawPanel()
@@ -25,6 +27,11 @@ public class DrawPanel extends JPanel
     }
     
     public void setController(ShapeController controller)
+    {
+        this.controller = controller;
+    }
+    
+    public void setControllerAndSort(ShapeController controller)
     {
         this.controller = controller;
         new SortingDelayWorker(controller, this, SORT_DELAY_TIME).execute();
@@ -48,6 +55,15 @@ public class DrawPanel extends JPanel
         if (controller == null)
             return null;
         return controller.getShapes();
+    }
+    
+    public void centralise(Dimension d)
+    {
+        if (controller != null)
+        {
+            controller.centralise(d);
+            repaint();
+        }
     }
     
     
