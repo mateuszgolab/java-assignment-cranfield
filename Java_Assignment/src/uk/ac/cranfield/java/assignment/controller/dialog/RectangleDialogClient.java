@@ -2,12 +2,13 @@ package uk.ac.cranfield.java.assignment.controller.dialog;
 
 import java.awt.Dialog;
 
-import uk.ac.cranfield.java.assignment.controller.draw.RectangleDrawer;
+import uk.ac.cranfield.java.assignment.controller.draw.RectangleController;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomColorGenerator;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomNumbersGenerator;
 import uk.ac.cranfield.java.assignment.model.info.RectangleDialogInfo;
 import uk.ac.cranfield.java.assignment.model.shape.Rectangle;
 import uk.ac.cranfield.java.assignment.view.DrawPanel;
+import uk.ac.cranfield.java.assignment.view.shape.RectangleView;
 
 
 public class RectangleDialogClient implements DialogClient
@@ -39,7 +40,7 @@ public class RectangleDialogClient implements DialogClient
             rectangles[i] = new Rectangle(width, length, x, y, RandomColorGenerator.getRandomColor());
         }
         
-        drawPanel.setDrawer(new RectangleDrawer(rectangles));
+        drawPanel.setController(new RectangleController(rectangles, new RectangleView()));
         
     }
     

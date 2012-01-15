@@ -1,4 +1,4 @@
-package uk.ac.cranfield.java.assignment.controller.utils;
+package uk.ac.cranfield.java.assignment.controller.interfaces;
 
 /**
  * The interface Sortable is the root of the hierarchy of things that can be

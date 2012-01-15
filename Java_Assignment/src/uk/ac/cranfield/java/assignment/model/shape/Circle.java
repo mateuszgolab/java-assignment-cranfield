@@ -1,10 +1,16 @@
 package uk.ac.cranfield.java.assignment.model.shape;
 
 import java.awt.Color;
+import java.io.Serializable;
 
 
-public class Circle extends Ellipse
+public class Circle extends Ellipse implements Serializable
 {
+    
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -8860138513034753591L;
     
     public Circle(double radius, int x, int y, Color c)
     {

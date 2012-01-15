@@ -27,7 +27,7 @@ public class MainMenu extends JMenuBar
     
     private void create()
     {
-        fileMenu = new FileMenu(parent);
+        fileMenu = new FileMenu(parent, drawPanel);
         displayMenu = new DisplayMenu(parent, drawPanel);
     }
     

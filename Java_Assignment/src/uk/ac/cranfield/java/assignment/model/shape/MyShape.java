@@ -1,8 +1,6 @@
 package uk.ac.cranfield.java.assignment.model.shape;
 
-import java.awt.Color;
-
-import uk.ac.cranfield.java.assignment.controller.utils.Sortable;
+import uk.ac.cranfield.java.assignment.controller.interfaces.Sortable;
 
 /**
  * The abstract class MyShape is the root of the hierarchy of shapes. This class
@@ -16,8 +14,6 @@ import uk.ac.cranfield.java.assignment.controller.utils.Sortable;
 public abstract class MyShape implements Sortable
 {
     
-    
-    protected Color color;
     
     /**
      * Abstract method that calculates the area of a Shape. Any class
@@ -48,22 +44,5 @@ public abstract class MyShape implements Sortable
             return -1;
     }
     
-    
-    /**
-     * @return the color
-     */
-    public final Color getColor()
-    {
-        return color;
-    }
-    
-    
-    /**
-     * @param color the color to set
-     */
-    public final void setColor(Color color)
-    {
-        this.color = color;
-    }
     
 }
