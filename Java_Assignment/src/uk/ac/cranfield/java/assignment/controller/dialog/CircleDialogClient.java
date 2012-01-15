@@ -2,7 +2,7 @@ package uk.ac.cranfield.java.assignment.controller.dialog;
 
 import java.awt.Dialog;
 
-import uk.ac.cranfield.java.assignment.controller.draw.CircleController;
+import uk.ac.cranfield.java.assignment.controller.shape.CircleController;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomColorGenerator;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomNumbersGenerator;
 import uk.ac.cranfield.java.assignment.model.info.CircleDialogInfo;
