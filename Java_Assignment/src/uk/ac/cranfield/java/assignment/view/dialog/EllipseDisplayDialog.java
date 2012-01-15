@@ -12,7 +12,7 @@ import javax.swing.event.ChangeEvent;
 
 import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
 import uk.ac.cranfield.java.assignment.model.info.EllipseDialogInfo;
-import uk.ac.cranfield.java.assignment.view.DimensionSlider;
+import uk.ac.cranfield.java.assignment.view.component.DimensionSlider;
 
 import com.jgoodies.forms.layout.FormLayout;
 

@@ -7,8 +7,8 @@ import uk.ac.cranfield.java.assignment.controller.utils.RandomColorGenerator;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomNumbersGenerator;
 import uk.ac.cranfield.java.assignment.model.info.CircleDialogInfo;
 import uk.ac.cranfield.java.assignment.model.shape.Circle;
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
-import uk.ac.cranfield.java.assignment.view.shape.CircleView;
+import uk.ac.cranfield.java.assignment.view.CircleView;
+import uk.ac.cranfield.java.assignment.view.panel.DrawPanel;
 
 
 public class CircleDialogClient implements DialogClient

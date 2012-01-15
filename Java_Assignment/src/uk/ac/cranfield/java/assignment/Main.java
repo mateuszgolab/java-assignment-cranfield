@@ -5,7 +5,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 
-import uk.ac.cranfield.java.assignment.view.MainFrame;
+import uk.ac.cranfield.java.assignment.view.frame.MainFrame;
 
 
 public class Main

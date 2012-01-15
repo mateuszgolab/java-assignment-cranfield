@@ -7,8 +7,8 @@ import uk.ac.cranfield.java.assignment.controller.utils.RandomColorGenerator;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomNumbersGenerator;
 import uk.ac.cranfield.java.assignment.model.info.RectangleDialogInfo;
 import uk.ac.cranfield.java.assignment.model.shape.Rectangle;
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
-import uk.ac.cranfield.java.assignment.view.shape.RectangleView;
+import uk.ac.cranfield.java.assignment.view.RectangleView;
+import uk.ac.cranfield.java.assignment.view.panel.DrawPanel;
 
 
 public class RectangleDialogClient implements DialogClient

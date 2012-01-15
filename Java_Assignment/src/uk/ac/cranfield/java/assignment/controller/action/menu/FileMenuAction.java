@@ -6,9 +6,11 @@ import javax.swing.AbstractAction;
 import javax.swing.Icon;
 
 import uk.ac.cranfield.java.assignment.controller.file.FileChooser;
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
+import uk.ac.cranfield.java.assignment.view.panel.DrawPanel;
 
-
+/**
+ * @author Mateusz Golab
+ */
 @SuppressWarnings("serial")
 public abstract class FileMenuAction extends AbstractAction
 {

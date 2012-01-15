@@ -2,8 +2,8 @@ package uk.ac.cranfield.java.assignment.view.menu;
 
 import javax.swing.JMenuBar;
 
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
-import uk.ac.cranfield.java.assignment.view.MainFrame;
+import uk.ac.cranfield.java.assignment.view.frame.MainFrame;
+import uk.ac.cranfield.java.assignment.view.panel.DrawPanel;
 
 
 @SuppressWarnings("serial")
