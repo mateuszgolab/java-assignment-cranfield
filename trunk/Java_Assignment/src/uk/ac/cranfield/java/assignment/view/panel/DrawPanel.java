@@ -8,7 +8,7 @@ import java.awt.RenderingHints;
 
 import javax.swing.JPanel;
 
-import uk.ac.cranfield.java.assignment.controller.interfaces.ShapeController;
+import uk.ac.cranfield.java.assignment.controller.ShapeController;
 import uk.ac.cranfield.java.assignment.controller.utils.FrameToolkit;
 import uk.ac.cranfield.java.assignment.controller.worker.SortingDelayWorker;
 import uk.ac.cranfield.java.assignment.model.shape.MyShape;

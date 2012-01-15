@@ -3,7 +3,7 @@ package uk.ac.cranfield.java.assignment.controller.worker;
 import javax.swing.JPanel;
 import javax.swing.SwingWorker;
 
-import uk.ac.cranfield.java.assignment.controller.interfaces.ShapeController;
+import uk.ac.cranfield.java.assignment.controller.ShapeController;
 import uk.ac.cranfield.java.assignment.controller.utils.FrameToolkit;
 
 

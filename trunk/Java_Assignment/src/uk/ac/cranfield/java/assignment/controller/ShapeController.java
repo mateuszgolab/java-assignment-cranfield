@@ -1,4 +1,4 @@
-package uk.ac.cranfield.java.assignment.controller.interfaces;
+package uk.ac.cranfield.java.assignment.controller;
 
 import java.awt.Dimension;
 import java.awt.Graphics2D;

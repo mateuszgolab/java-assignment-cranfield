@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.event.ChangeListener;
 
-import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
+import uk.ac.cranfield.java.assignment.controller.interfaces.DialogClient;
 import uk.ac.cranfield.java.assignment.controller.utils.TextFieldFactory;
 import uk.ac.cranfield.java.assignment.view.component.DimensionSlider;
 
@@ -26,10 +26,9 @@ import com.jgoodies.forms.layout.FormLayout;
 public abstract class DisplayDialog extends NDialog implements ChangeListener
 {
     
-    protected static int MAX_RADIUS = 400;
+    protected static int MAX_RADIUS = 401;
     private static int MAX_SHAPES_NUMBER = 50;
-    private static int MAJOR_TICK = 10;
-    private static int MINOR_TICK = 5;
+    private static int MAJOR_TICK = 7;
     private String title;
     private JLabel numberLabel;
     protected DimensionSlider number;
@@ -39,7 +38,6 @@ public abstract class DisplayDialog extends NDialog implements ChangeListener
     protected JButton okButton;
     private JButton cancelButton;
     private JPanel southPanel;
-    protected TextFieldFactory factory;
     protected JTextField numberText;
     
     
@@ -49,7 +47,6 @@ public abstract class DisplayDialog extends NDialog implements ChangeListener
         this.title = title;
         this.panel = new JPanel();
         this.southPanel = new JPanel();
-        this.factory = new TextFieldFactory();
         
         setLayout();
         create();
@@ -66,8 +63,8 @@ public abstract class DisplayDialog extends NDialog implements ChangeListener
     protected void create()
     {
         numberLabel = new JLabel("Number of " + title + "s :");
-        number = new DimensionSlider(0, MAX_SHAPES_NUMBER, MAX_SHAPES_NUMBER / 2, MINOR_TICK, MAJOR_TICK);
-        numberText = factory.createIntegerTextField(number.getValue());
+        number = new DimensionSlider(1, MAX_SHAPES_NUMBER, MAX_SHAPES_NUMBER / 2, MAJOR_TICK);
+        numberText = TextFieldFactory.createIntegerTextField(number.getValue());
         
         
         okButton = new JButton("Ok");
@@ -89,6 +86,7 @@ public abstract class DisplayDialog extends NDialog implements ChangeListener
     
     public void reset()
     {
+        pack();
         number.reset();
         numberText.setText(Integer.toString(number.getValue()));
     }

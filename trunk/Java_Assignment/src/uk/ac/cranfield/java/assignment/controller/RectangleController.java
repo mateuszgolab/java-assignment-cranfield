@@ -3,7 +3,6 @@ package uk.ac.cranfield.java.assignment.controller;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
 
-import uk.ac.cranfield.java.assignment.controller.interfaces.ShapeController;
 import uk.ac.cranfield.java.assignment.model.shape.MyShape;
 import uk.ac.cranfield.java.assignment.model.shape.Rectangle;
 import uk.ac.cranfield.java.assignment.view.interfaces.Drawable;
