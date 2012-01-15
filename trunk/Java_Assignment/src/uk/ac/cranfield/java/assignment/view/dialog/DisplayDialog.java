@@ -16,7 +16,7 @@ import javax.swing.event.ChangeListener;
 
 import uk.ac.cranfield.java.assignment.controller.dialog.DialogClient;
 import uk.ac.cranfield.java.assignment.controller.utils.TextFieldFactory;
-import uk.ac.cranfield.java.assignment.view.DimensionSlider;
+import uk.ac.cranfield.java.assignment.view.component.DimensionSlider;
 
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;

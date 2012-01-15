@@ -1,4 +1,4 @@
-package uk.ac.cranfield.java.assignment.view;
+package uk.ac.cranfield.java.assignment.view.panel;
 
 import java.awt.Color;
 import java.awt.Dimension;

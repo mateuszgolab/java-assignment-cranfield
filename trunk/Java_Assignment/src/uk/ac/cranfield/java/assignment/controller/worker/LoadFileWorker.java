@@ -18,10 +18,10 @@ import uk.ac.cranfield.java.assignment.model.shape.Circle;
 import uk.ac.cranfield.java.assignment.model.shape.Ellipse;
 import uk.ac.cranfield.java.assignment.model.shape.MyShape;
 import uk.ac.cranfield.java.assignment.model.shape.Rectangle;
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
-import uk.ac.cranfield.java.assignment.view.shape.CircleView;
-import uk.ac.cranfield.java.assignment.view.shape.EllipseView;
-import uk.ac.cranfield.java.assignment.view.shape.RectangleView;
+import uk.ac.cranfield.java.assignment.view.CircleView;
+import uk.ac.cranfield.java.assignment.view.EllipseView;
+import uk.ac.cranfield.java.assignment.view.RectangleView;
+import uk.ac.cranfield.java.assignment.view.panel.DrawPanel;
 
 
 public class LoadFileWorker extends SwingWorker<Void, Void>

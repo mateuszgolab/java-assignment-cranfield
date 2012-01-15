@@ -6,8 +6,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 
 import uk.ac.cranfield.java.assignment.controller.worker.SaveFileWorker;
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
-import uk.ac.cranfield.java.assignment.view.MainFrame;
+import uk.ac.cranfield.java.assignment.view.frame.MainFrame;
+import uk.ac.cranfield.java.assignment.view.panel.DrawPanel;
 
 
 @SuppressWarnings("serial")

@@ -4,8 +4,8 @@ import javax.swing.JMenu;
 
 import uk.ac.cranfield.java.assignment.controller.action.menu.OpenFileAction;
 import uk.ac.cranfield.java.assignment.controller.action.menu.SaveFileAction;
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
-import uk.ac.cranfield.java.assignment.view.MainFrame;
+import uk.ac.cranfield.java.assignment.view.frame.MainFrame;
+import uk.ac.cranfield.java.assignment.view.panel.DrawPanel;
 
 
 @SuppressWarnings("serial")

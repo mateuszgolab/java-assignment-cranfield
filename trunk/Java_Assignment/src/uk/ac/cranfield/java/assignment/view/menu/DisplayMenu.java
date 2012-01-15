@@ -9,10 +9,10 @@ import uk.ac.cranfield.java.assignment.controller.action.menu.ShapeMenuAction;
 import uk.ac.cranfield.java.assignment.controller.dialog.CircleDialogClient;
 import uk.ac.cranfield.java.assignment.controller.dialog.EllipseDialogClient;
 import uk.ac.cranfield.java.assignment.controller.dialog.RectangleDialogClient;
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
 import uk.ac.cranfield.java.assignment.view.dialog.CircleDisplayDialog;
 import uk.ac.cranfield.java.assignment.view.dialog.EllipseDisplayDialog;
 import uk.ac.cranfield.java.assignment.view.dialog.RectangleDisplayDialog;
+import uk.ac.cranfield.java.assignment.view.panel.DrawPanel;
 
 
 @SuppressWarnings("serial")

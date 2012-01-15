@@ -1,4 +1,4 @@
-package uk.ac.cranfield.java.assignment.view;
+package uk.ac.cranfield.java.assignment.view.frame;
 
 import java.awt.Dimension;
 import java.awt.event.WindowEvent;
@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 
 import uk.ac.cranfield.java.assignment.controller.utils.FrameToolkit;
 import uk.ac.cranfield.java.assignment.view.menu.MainMenu;
+import uk.ac.cranfield.java.assignment.view.panel.DrawPanel;
 
 
 @SuppressWarnings("serial")

@@ -7,8 +7,8 @@ import uk.ac.cranfield.java.assignment.controller.utils.RandomColorGenerator;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomNumbersGenerator;
 import uk.ac.cranfield.java.assignment.model.info.EllipseDialogInfo;
 import uk.ac.cranfield.java.assignment.model.shape.Ellipse;
-import uk.ac.cranfield.java.assignment.view.DrawPanel;
-import uk.ac.cranfield.java.assignment.view.shape.EllipseView;
+import uk.ac.cranfield.java.assignment.view.EllipseView;
+import uk.ac.cranfield.java.assignment.view.panel.DrawPanel;
 
 
 public class EllipseDialogClient implements DialogClient
