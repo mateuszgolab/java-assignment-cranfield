@@ -1,5 +1,7 @@
 package uk.ac.cranfield.java.assignment.controller.utils;
 
+import uk.ac.cranfield.java.assignment.controller.interfaces.Sortable;
+
 
 /**
  * The class Sort provides sorting classic algorithms. Relies on the interface {@link Sortable} to compare different
@@ -19,7 +21,7 @@ public class Sort
      * Mistake fixed "tmp.compare(a[j - incr]) < 0" instead of
      * "tmp.compare(a[j] - incr) < 0"
      */
-    public static void shell_sort(Sortable[] a)
+    public static synchronized void shell_sort(Sortable[] a)
     {
         int n = a.length;
         int incr = n / 2;

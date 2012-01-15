@@ -16,6 +16,11 @@ public class Rectangle extends MyShape implements Serializable
     
     
     /**
+     * 
+     */
+    private static final long serialVersionUID = -2595404648736409317L;
+    
+    /**
      * This constructor generates a new Rectangle with the proper values for its
      * fields.
      * @param w double representing the width of the Rectangle.
@@ -43,6 +48,8 @@ public class Rectangle extends MyShape implements Serializable
     
     /** integer representing the y - coordinate of the centre of Rectangle. */
     private int y;
+    
+    private Color color;
     
     /**
      * Implementation for the abstract method area of the base class MyShape. A
@@ -114,4 +121,22 @@ public class Rectangle extends MyShape implements Serializable
     {
         this.y = y;
     }
+    
+    /**
+     * @return the color
+     */
+    public final Color getColor()
+    {
+        return color;
+    }
+    
+    
+    /**
+     * @param color the color to set
+     */
+    public final void setColor(Color color)
+    {
+        this.color = color;
+    }
+    
 }

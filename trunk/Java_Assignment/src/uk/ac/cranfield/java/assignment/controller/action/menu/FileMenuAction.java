@@ -1,25 +1,27 @@
 package uk.ac.cranfield.java.assignment.controller.action.menu;
 
 import java.awt.Frame;
-import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import uk.ac.cranfield.java.assignment.view.NDialog;
+import uk.ac.cranfield.java.assignment.controller.file.OpenFileChooser;
+import uk.ac.cranfield.java.assignment.view.DrawPanel;
 
 
-public class FileMenuAction extends AbstractAction {
+public abstract class FileMenuAction extends AbstractAction
+{
     
-    private NDialog dialog;
+    protected OpenFileChooser fileChooser;
+    protected Frame parent;
+    protected DrawPanel drawPanel;
     
-    public FileMenuAction(Frame parent, String title) {
+    public FileMenuAction(Frame parent, String title, DrawPanel drawPanel)
+    {
         super(title);
-        this.dialog = new NDialog(parent, title, null, true);
+        this.parent = parent;
+        fileChooser = new OpenFileChooser();
+        this.drawPanel = drawPanel;
     }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        dialog.show();
-    }
+    
     
 }

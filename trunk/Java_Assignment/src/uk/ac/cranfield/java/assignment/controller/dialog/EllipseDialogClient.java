@@ -2,12 +2,13 @@ package uk.ac.cranfield.java.assignment.controller.dialog;
 
 import java.awt.Dialog;
 
-import uk.ac.cranfield.java.assignment.controller.draw.EllipseDrawer;
+import uk.ac.cranfield.java.assignment.controller.draw.EllipseController;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomColorGenerator;
 import uk.ac.cranfield.java.assignment.controller.utils.RandomNumbersGenerator;
 import uk.ac.cranfield.java.assignment.model.info.EllipseDialogInfo;
 import uk.ac.cranfield.java.assignment.model.shape.Ellipse;
 import uk.ac.cranfield.java.assignment.view.DrawPanel;
+import uk.ac.cranfield.java.assignment.view.shape.EllipseView;
 
 
 public class EllipseDialogClient implements DialogClient
@@ -41,7 +42,7 @@ public class EllipseDialogClient implements DialogClient
             ellipses[i] = new Ellipse(minorRadius, majorRadius, x, y, RandomColorGenerator.getRandomColor());
         }
         
-        drawPanel.setDrawer(new EllipseDrawer(ellipses));
+        drawPanel.setController(new EllipseController(ellipses, new EllipseView()));
         
     }
     

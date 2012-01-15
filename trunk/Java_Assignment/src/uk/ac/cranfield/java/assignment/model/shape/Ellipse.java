@@ -1,6 +1,7 @@
 package uk.ac.cranfield.java.assignment.model.shape;
 
 import java.awt.Color;
+import java.io.Serializable;
 
 
 /**
@@ -11,8 +12,13 @@ import java.awt.Color;
  * @version 1.0
  * @see MyShape
  */
-public class Ellipse extends MyShape
+public class Ellipse extends MyShape implements Serializable
 {
+    
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -5303480891724484467L;
     
     /** double representing the minor radius of the Ellipse. */
     protected double minorRadius;
@@ -25,6 +31,8 @@ public class Ellipse extends MyShape
     
     /** integer representing the y - coordinate of the centre of the Ellipse */
     protected int y;
+    
+    protected Color color;
     
     /**
      * This constructor generates a new Ellipse with the proper values for its
@@ -141,6 +149,23 @@ public class Ellipse extends MyShape
     public void setMajorRadius(double majorRadius)
     {
         this.majorRadius = majorRadius;
+    }
+    
+    /**
+     * @return the color
+     */
+    public final Color getColor()
+    {
+        return color;
+    }
+    
+    
+    /**
+     * @param color the color to set
+     */
+    public final void setColor(Color color)
+    {
+        this.color = color;
     }
     
     

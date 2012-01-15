@@ -1,24 +1,22 @@
-package uk.ac.cranfield.java.assignment.controller;
-
-import java.awt.Graphics2D;
+package uk.ac.cranfield.java.assignment.controller.worker;
 
 import javax.swing.JPanel;
 import javax.swing.SwingWorker;
 
-import uk.ac.cranfield.java.assignment.controller.draw.ShapeDrawer;
+import uk.ac.cranfield.java.assignment.controller.interfaces.ShapeController;
 import uk.ac.cranfield.java.assignment.controller.utils.FrameToolkit;
 
 
 public class SortingDelayWorker extends SwingWorker<Void, Void>
 {
     
-    private ShapeDrawer drawer;
+    private ShapeController controller;
     private JPanel panel;
     private long delay;
     
-    public SortingDelayWorker(ShapeDrawer drawer, JPanel panel, long delay)
+    public SortingDelayWorker(ShapeController controller, JPanel panel, long delay)
     {
-        this.drawer = drawer;
+        this.controller = controller;
         this.panel = panel;
         this.delay = delay;
     }
@@ -26,15 +24,15 @@ public class SortingDelayWorker extends SwingWorker<Void, Void>
     @Override
     protected Void doInBackground() throws Exception
     {
-        drawer.draw((Graphics2D) panel.getGraphics());
+        panel.repaint();
         Thread.sleep(delay);
-        drawer.sort(panel.getGraphics(), FrameToolkit.getPanelCenter(panel));
+        controller.sort(FrameToolkit.getPanelCenter(panel));
         return null;
     }
     
     @Override
     public void done()
     {
-        drawer.draw((Graphics2D) panel.getGraphics());
+        panel.repaint();
     }
 }
