@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="lib/jgoodies-forms-1.0.4.jar" destdir="E:\STUDIA\Cranfield\Java\Assignment\doc" doctitle="Java Assignment Mateusz Golab s163618" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="uk.ac.cranfield.java.assignment.view.frame,uk.ac.cranfield.java.assignment.controller.interfaces,uk.ac.cranfield.java.assignment.view.component,uk.ac.cranfield.java.assignment.controller.utils,uk.ac.cranfield.java.assignment.view,uk.ac.cranfield.java.assignment.controller.dialog,uk.ac.cranfield.java.assignment.controller.action.menu,uk.ac.cranfield.java.assignment.controller,uk.ac.cranfield.java.assignment.controller.worker,uk.ac.cranfield.java.assignment,uk.ac.cranfield.java.assignment.model.info,uk.ac.cranfield.java.assignment.view.dialog,uk.ac.cranfield.java.assignment.view.interfaces,uk.ac.cranfield.java.assignment.model.shape,uk.ac.cranfield.java.assignment.view.panel,uk.ac.cranfield.java.assignment.view.menu,uk.ac.cranfield.java.assignment.controller.file" source="1.6" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

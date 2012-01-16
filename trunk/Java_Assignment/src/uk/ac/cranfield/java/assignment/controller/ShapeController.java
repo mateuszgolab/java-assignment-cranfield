@@ -18,6 +18,11 @@ public abstract class ShapeController
 {
     
     /**
+     * The time in miliseconds to delay drawing sorted shapes.
+     */
+    public static long SORT_DELAY_TIME = 1000;
+    
+    /**
      * The table of shapes.
      */
     protected MyShape[] shapes;

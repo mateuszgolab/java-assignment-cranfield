@@ -13,31 +13,57 @@ import uk.ac.cranfield.java.assignment.controller.utils.FrameToolkit;
 import uk.ac.cranfield.java.assignment.controller.worker.SortingDelayWorker;
 import uk.ac.cranfield.java.assignment.model.shape.MyShape;
 
-
+/**
+ * This class provides main drawing panel of the application
+ * Extends {@link JPanel}. Every shape in applicaion is drawn on this panel.
+ * @author Mateusz Golab
+ * @version 1.0
+ * @see JPanel
+ */
 @SuppressWarnings("serial")
 public class DrawPanel extends JPanel
 {
     
-    private static long SORT_DELAY_TIME = 1000;
+    /**
+     * Reference to shape controller.
+     */
     private ShapeController controller;
     
+    /**
+     * The constructor creates drawing panel.
+     * Sets background color to white.
+     */
     public DrawPanel()
     {
         setBackground(Color.WHITE);
     }
     
+    /**
+     * This method sets shape controller to provide proper control of drawing shapes.
+     * @param controller the instance of shape controller.
+     */
     public void setController(ShapeController controller)
     {
         this.controller = controller;
     }
     
+    
+    /**
+     * This method sets shape controller to provide proper control of drawing shapes.
+     * Additionally new controller launches sorting and drawing worker.
+     * @param controller the instance of shape controller.
+     */
     public void setControllerAndSort(ShapeController controller)
     {
         this.controller = controller;
-        new SortingDelayWorker(controller, this, SORT_DELAY_TIME).execute();
+        new SortingDelayWorker(controller, this, ShapeController.SORT_DELAY_TIME).execute();
     }
     
-    
+    /**
+     * This method is overriden from JPanel.
+     * Performs standard painting from JPanel.
+     * Additionally sets antialiasing rendering and launches drawing from the controller.
+     */
     @Override
     public void paintComponent(Graphics graphics)
     {
@@ -50,6 +76,12 @@ public class DrawPanel extends JPanel
             controller.draw((Graphics2D) graphics);
     }
     
+    
+    /**
+     * This method provides currently used shapes.
+     * Returns null if no shapes in use.
+     * @return current shapes.
+     */
     public MyShape[] getShapes()
     {
         if (controller == null)
@@ -57,11 +89,15 @@ public class DrawPanel extends JPanel
         return controller.getShapes();
     }
     
-    public void centralise(Dimension d)
+    /**
+     * This method launches shapes location centralising method from the controller.
+     * @param centre centre of the screen location
+     */
+    public void centralise(Dimension centre)
     {
         if (controller != null)
         {
-            controller.centralise(d);
+            controller.centralise(centre);
             repaint();
         }
     }
