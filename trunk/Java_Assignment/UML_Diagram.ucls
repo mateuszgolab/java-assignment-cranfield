@@ -1,75 +1,591 @@
-<class-diagram version="1.0.6" icons="true" automaticImage="JPEG" always-add-relationships="true" generalizations="true" 
-  realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
-  <class id="1" corner="BOTTOM_RIGHT" language="java" 
-    name="uk.ac.cranfield.java.assignment.controller.action.menu.FileMenuAction" project="Java_Assignment" 
-    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/action/menu/FileMenuAction.java" 
-    binary="false">    
-    <position height="115" width="244" x="151" y="164"/>    
-    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
+<class-diagram version="1.0.6" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="false" dependencies="false" nesting-relationships="false">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.model.info.CircleDialogInfo" 
+    project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/model/info/CircleDialogInfo.java" binary="false">    
+    <position height="-1" width="-1" x="686" y="190"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
     </display>  
   </class>  
   <class id="2" corner="BOTTOM_RIGHT" language="java" 
-    name="uk.ac.cranfield.java.assignment.controller.action.menu.OpenFileAction" project="Java_Assignment" 
-    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/action/menu/OpenFileAction.java" 
-    binary="false">    
-    <position height="-1" width="-1" x="135" y="420"/>    
-    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
+    name="uk.ac.cranfield.java.assignment.model.info.EllipseDialogInfo" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/model/info/EllipseDialogInfo.java" binary="false">    
+    <position height="-1" width="-1" x="363" y="221"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
     </display>  
   </class>  
   <class id="3" corner="BOTTOM_RIGHT" language="java" 
-    name="uk.ac.cranfield.java.assignment.controller.action.menu.SaveFileAction" project="Java_Assignment" 
-    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/action/menu/SaveFileAction.java" 
-    binary="false">    
-    <position height="-1" width="-1" x="421" y="423"/>    
-    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
+    name="uk.ac.cranfield.java.assignment.model.info.RectangleDialogInfo" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/model/info/RectangleDialogInfo.java" binary="false">    
+    <position height="-1" width="-1" x="530" y="220"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
     </display>  
   </class>  
-  <class id="4" corner="BOTTOM_RIGHT" language="java" 
-    name="uk.ac.cranfield.java.assignment.controller.action.menu.ShapeMenuAction" project="Java_Assignment" 
-    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/action/menu/ShapeMenuAction.java" 
+  <class id="4" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.model.info.DialogInfo" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/model/info/DialogInfo.java" 
     binary="false">    
-    <position height="-1" width="-1" x="269" y="69"/>    
-    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
+    <position height="-1" width="-1" x="521" y="51"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
     </display>  
   </class>  
-  <class id="5" corner="BOTTOM_RIGHT" language="java" 
-    name="uk.ac.cranfield.java.assignment.controller.dialog.CircleDialogClient" project="Java_Assignment" 
-    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/dialog/CircleDialogClient.java" binary="false">    
-    <position height="131" width="209" x="465" y="159"/>    
-    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.controller.ShapeController" 
+    project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/ShapeController.java" binary="false">    
+    <position height="-1" width="-1" x="985" y="81"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
     </display>  
   </class>  
   <class id="6" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.RectangleController" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/RectangleController.java" binary="false">    
+    <position height="33" width="136" x="1081" y="110"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.EllipseController" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/EllipseController.java" binary="false">    
+    <position height="-1" width="-1" x="879" y="227"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.controller.CircleController" 
+    project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/CircleController.java" binary="false">    
+    <position height="33" width="112" x="773" y="110"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="9" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.model.shape.Rectangle" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/model/shape/Rectangle.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="59" y="260"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.model.shape.MyShape" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/model/shape/MyShape.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="191" y="59"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.model.shape.Ellipse" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/model/shape/Ellipse.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="199" y="266"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="12" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.model.shape.Circle" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/model/shape/Circle.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="204" y="475"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="13" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.action.menu.FileMenuAction" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/action/menu/FileMenuAction.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="456" y="787"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="14" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.action.menu.OpenFileAction" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/action/menu/OpenFileAction.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="372" y="887"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="15" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.action.menu.SaveFileAction" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/action/menu/SaveFileAction.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="571" y="887"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="16" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.action.menu.ShapeMenuAction" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/action/menu/ShapeMenuAction.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="689" y="789"/>    
+    <display autosize="true" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="17" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.file.ObjFileChooser" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/file/ObjFileChooser.java" binary="false">    
+    <position height="-1" width="-1" x="219" y="794"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="18" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.file.ObjFileFilter" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/file/ObjFileFilter.java" binary="false">    
+    <position height="-1" width="-1" x="71" y="795"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <interface id="19" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.interfaces.DialogClient" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/interfaces/DialogClient.java" binary="false">    
+    <position height="-1" width="-1" x="529" y="367"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <interface id="20" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.interfaces.Sortable" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/interfaces/Sortable.java" binary="false">    
+    <position height="-1" width="-1" x="65" y="60"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <class id="21" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.utils.FrameToolkit" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/utils/FrameToolkit.java" binary="false">    
+    <position height="-1" width="-1" x="842" y="710"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="22" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.utils.RandomColorGenerator" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/utils/RandomColorGenerator.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="1127" y="875"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="23" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.utils.RandomNumbersGenerator" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/utils/RandomNumbersGenerator.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="1131" y="772"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="24" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.controller.utils.Sort" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/utils/Sort.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="55" y="686"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="25" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.utils.TextFieldFactory" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/utils/TextFieldFactory.java" binary="false">    
+    <position height="-1" width="-1" x="944" y="861"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="26" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.worker.LoadFileWorker" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/worker/LoadFileWorker.java" binary="false">    
+    <position height="-1" width="-1" x="64" y="428"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="27" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.worker.SaveFileWorker" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/worker/SaveFileWorker.java" binary="false">    
+    <position height="-1" width="-1" x="65" y="506"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="28" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.worker.SortingDelayWorker" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/worker/SortingDelayWorker.java" binary="false">    
+    <position height="-1" width="-1" x="72" y="591"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="29" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.view.RectangleView" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/RectangleView.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="679" y="687"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="30" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.view.EllipseView" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/EllipseView.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="547" y="685"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="31" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.view.CircleView" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/CircleView.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="419" y="689"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="32" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.view.panel.DrawPanel" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/panel/DrawPanel.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="356" y="579"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="33" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.view.menu.DisplayMenu" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/menu/DisplayMenu.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="187" y="703"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="34" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.view.menu.FileMenu" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/menu/FileMenu.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="294" y="701"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="35" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.view.menu.MainMenu" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/menu/MainMenu.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="223" y="609"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <interface id="36" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.view.interfaces.Drawable" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/interfaces/Drawable.java" binary="false">    
+    <position height="-1" width="-1" x="533" y="592"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <class id="37" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.view.frame.MainFrame" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/frame/MainFrame.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="349" y="459"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="38" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.view.dialog.CircleDisplayDialog.OkButtonAction" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/dialog/CircleDisplayDialog.java" binary="false">    
+    <position height="-1" width="-1" x="1170" y="591"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="39" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.view.dialog.CircleDisplayDialog" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/dialog/CircleDisplayDialog.java" binary="false">    
+    <position height="-1" width="-1" x="1165" y="467"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="40" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.view.dialog.DisplayDialog" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/dialog/DisplayDialog.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="1021" y="363"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="41" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.view.dialog.DisplayDialog.CancelButtonAction" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/dialog/DisplayDialog.java" binary="false">    
+    <position height="-1" width="-1" x="839" y="367"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="42" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.view.dialog.DisplayDialog.DialogAdapter" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/dialog/DisplayDialog.java" binary="false">    
+    <position height="-1" width="-1" x="1170" y="366"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="43" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.view.dialog.EllipseDisplayDialog" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/dialog/EllipseDisplayDialog.java" binary="false">    
+    <position height="-1" width="-1" x="856" y="481"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="44" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.view.dialog.EllipseDisplayDialog.OkButtonAction" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/dialog/EllipseDisplayDialog.java" binary="false">    
+    <position height="-1" width="-1" x="857" y="595"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="45" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.view.dialog.NDialog" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/dialog/NDialog.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="1020" y="234"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="46" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.view.dialog.RectangleDisplayDialog" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/dialog/RectangleDisplayDialog.java" binary="false">    
+    <position height="-1" width="-1" x="1014" y="536"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="47" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.view.dialog.RectangleDisplayDialog.OkButtonAction" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/dialog/RectangleDisplayDialog.java" binary="false">    
+    <position height="-1" width="-1" x="1018" y="649"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="48" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.dialog.CircleDialogClient" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/dialog/CircleDialogClient.java" binary="false">    
+    <position height="-1" width="-1" x="687" y="362"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="49" corner="BOTTOM_RIGHT" language="java" 
     name="uk.ac.cranfield.java.assignment.controller.dialog.EllipseDialogClient" project="Java_Assignment" 
     file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/dialog/EllipseDialogClient.java" 
     binary="false">    
-    <position height="131" width="209" x="682" y="254"/>    
-    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
+    <position height="-1" width="-1" x="522" y="497"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
     </display>  
   </class>  
-  <generalization id="7">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="1"/>  
+  <class id="50" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.dialog.RectangleDialogClient" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/dialog/RectangleDialogClient.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="677" y="493"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="51" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.view.component.DimensionSlider" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/view/component/DimensionSlider.java" binary="false">    
+    <position height="-1" width="-1" x="710" y="599"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="52" corner="BOTTOM_RIGHT" language="java" name="uk.ac.cranfield.java.assignment.Main" 
+    project="Java_Assignment" file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/Main.java" binary="false">    
+    <position height="-1" width="-1" x="349" y="367"/>    
+    <display autosize="false" package="false" initial-value="false" signature="false" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <realization id="53">    
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="19"/>  
+  </realization>  
+  <generalization id="54">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="45"/>  
   </generalization>  
-  <generalization id="8">    
+  <generalization id="55">    
     <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
+    <end type="TARGET" refId="4"/>  
   </generalization>  
-  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
-    <attributes public="true" package="true" protected="true" private="true"/>    
-    <operations public="true" package="true" protected="true" private="true"/>  
+  <generalization id="56">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="13"/>  
+  </generalization>  
+  <realization id="57">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="20"/>  
+  </realization>  
+  <nesting id="58">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="47"/>  
+  </nesting>  
+  <generalization id="59">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="60">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="40"/>  
+  </generalization>  
+  <nesting id="61">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="44"/>  
+  </nesting>  
+  <generalization id="62">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="63">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <nesting id="64">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="38"/>  
+  </nesting>  
+  <nesting id="65">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="41"/>  
+  </nesting>  
+  <generalization id="66">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <generalization id="67">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <realization id="68">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="36"/>  
+  </realization>  
+  <generalization id="69">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="70">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <generalization id="71">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <realization id="72">    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="19"/>  
+  </realization>  
+  <generalization id="73">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="13"/>  
+  </generalization>  
+  <realization id="74">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="19"/>  
+  </realization>  
+  <realization id="75">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="36"/>  
+  </realization>  
+  <generalization id="76">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="40"/>  
+  </generalization>  
+  <nesting id="77">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="42"/>  
+  </nesting>  
+  <realization id="78">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="36"/>  
+  </realization>  
+  <generalization id="79">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="40"/>  
+  </generalization>  
+  <classifier-display autosize="false" package="false" initial-value="false" signature="false" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="false"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
   </classifier-display>  
-  <association-display labels="true" multiplicity="true"/>
+  <association-display labels="false" multiplicity="false"/>
 </class-diagram>
