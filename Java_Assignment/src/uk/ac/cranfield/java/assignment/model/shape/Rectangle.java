@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 /**
  * The class Rectangle represents a geometric shape. A Rectangle is defined by
- * its width and height and centre (x,y)..
+ * its width and height and centre (x,y).
  * It implements the area method of the abstract base class MyShape.
  * @author
  * @version 1.1
@@ -16,7 +16,7 @@ public class Rectangle extends MyShape implements Serializable
     
     
     /**
-     * 
+     * serial UID
      */
     private static final long serialVersionUID = -2595404648736409317L;
     
@@ -49,11 +49,14 @@ public class Rectangle extends MyShape implements Serializable
     /** integer representing the y - coordinate of the centre of Rectangle. */
     private int y;
     
+    /**
+     * Represents the color of the Rectangle.
+     */
     private Color color;
     
     /**
-     * Implementation for the abstract method area of the base class MyShape. A
-     * Rectangle's area is the product of its height against its width.
+     * Implementation for the abstract method area of the base class MyShape.
+     * A Rectangle's area is the product of its height and its width.
      */
     @Override
     public double area()
@@ -61,13 +64,19 @@ public class Rectangle extends MyShape implements Serializable
         return width * height;
     }
     
-    /** @return width of the Rectangle. */
+    /**
+     * Returns the width of the Rectangle.
+     * @return width of the Rectangle.
+     */
     public double getWidth()
     {
         return width;
     }
     
-    /** @return height of the Rectangle. */
+    /**
+     * Returns the height of the Rectangle.
+     * @return height of the Rectangle.
+     */
     public double getHeight()
     {
         return height;
@@ -91,7 +100,10 @@ public class Rectangle extends MyShape implements Serializable
     }
     
     
-    /** @return the x - coordinate of the centre of Rectangle. */
+    /**
+     * Returns the x - coordinate of the Rectangle's centre.
+     * @return the x - coordinate of the Rectangle's centre.
+     */
     public final int getX()
     {
         return x;
@@ -99,15 +111,19 @@ public class Rectangle extends MyShape implements Serializable
     
     
     /**
-     * @param x the x to set
+     * Sets the x - coordinate of the Rectangle's centre.
+     * @param x the x - coordinate to set
      */
-    public final void setX(int x)
+    public final void setX(final int x)
     {
         this.x = x;
     }
     
     
-    /** @return the y - coordinate of the centre of Rectangle. */
+    /**
+     * Returns the y - coordinate of the Rectangle's centre.
+     * @return the y - coordinate of the Rectangle's centre
+     */
     public final int getY()
     {
         return y;
@@ -115,15 +131,17 @@ public class Rectangle extends MyShape implements Serializable
     
     
     /**
-     * @param y the y to set
+     * Sets the y - coordinate of the Rectangle's centre.
+     * @param y the y - coordinate to set
      */
-    public final void setY(int y)
+    public final void setY(final int y)
     {
         this.y = y;
     }
     
     /**
-     * @return the color
+     * Returns the color of the Rectangle.
+     * @return the color of the Rectangle.
      */
     public final Color getColor()
     {
@@ -132,9 +150,10 @@ public class Rectangle extends MyShape implements Serializable
     
     
     /**
+     * Sets the color of the Rectangle.
      * @param color the color to set
      */
-    public final void setColor(Color color)
+    public final void setColor(final Color color)
     {
         this.color = color;
     }
