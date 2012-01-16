@@ -11,28 +11,28 @@ public class EllipseDialogInfo extends DialogInfo
 {
     
     /**
-     * Represents minimal minor radius value.
+     * Represents minimum minor radius value.
      */
     private Integer minMinorRadius;
     
     /**
-     * Represents maximal minor radius value.
+     * Represents maximum minor radius value.
      */
     private Integer maxMinorRadius;
     
     /**
-     * Represents minimal major radius value.
+     * Represents minimum major radius value.
      */
     private Integer minMajorRadius;
     
     /**
-     * Represents maximal major radius value.
+     * Represents maximum major radius value.
      */
     private Integer maxMajorRadius;
     
     /**
-     * Returns the minimal minor radius value.
-     * @return the minimal minor radius value.
+     * Returns the minimum minor radius value.
+     * @return the minimum minor radius value.
      */
     public final Integer getMinMinorRadius()
     {
@@ -40,8 +40,8 @@ public class EllipseDialogInfo extends DialogInfo
     }
     
     /**
-     * Sets the minimal minor radius value.
-     * @param minMinorRadius the minimal minor radius value to set
+     * Sets the minimum minor radius value.
+     * @param minMinorRadius the minimum minor radius value to set
      */
     public final void setMinMinorRadius(final Integer minMinorRadius)
     {
@@ -49,8 +49,8 @@ public class EllipseDialogInfo extends DialogInfo
     }
     
     /**
-     * Returns maximal minor radius value.
-     * @return the maximal minor radius value.
+     * Returns maximum minor radius value.
+     * @return the maximum minor radius value.
      */
     public final Integer getMaxMinorRadius()
     {
@@ -58,8 +58,8 @@ public class EllipseDialogInfo extends DialogInfo
     }
     
     /**
-     * Sets the maximal minor radius value.
-     * @param maxMinorRadius the maximal minor radius value to set.
+     * Sets the maximum minor radius value.
+     * @param maxMinorRadius the maximum minor radius value to set.
      */
     public final void setMaxMinorRadius(final Integer maxMinorRadius)
     {
@@ -67,8 +67,8 @@ public class EllipseDialogInfo extends DialogInfo
     }
     
     /**
-     * Returns minimal major radius value.
-     * @return the minimal major radius value.
+     * Returns minimum major radius value.
+     * @return the minimum major radius value.
      */
     public final Integer getMinMajorRadius()
     {
@@ -76,8 +76,8 @@ public class EllipseDialogInfo extends DialogInfo
     }
     
     /**
-     * Sets the minimal major radius value.
-     * @param minMajorRadius the minimal major radius value to set.
+     * Sets the minimum major radius value.
+     * @param minMajorRadius the minimum major radius value to set.
      */
     public final void setMinMajorRadius(final Integer minMajorRadius)
     {
@@ -85,8 +85,8 @@ public class EllipseDialogInfo extends DialogInfo
     }
     
     /**
-     * Returns maximal major radius value.
-     * @return the maximal major radius value.
+     * Returns maximum major radius value.
+     * @return the maximum major radius value.
      */
     public final Integer getMaxMajorRadius()
     {
@@ -94,8 +94,8 @@ public class EllipseDialogInfo extends DialogInfo
     }
     
     /**
-     * Sets the maximal major radius value.
-     * @param maxMajorRadius the maximal major radius value.
+     * Sets the maximum major radius value.
+     * @param maxMajorRadius the maximum major radius value.
      */
     public final void setMaxMajorRadius(final Integer maxMajorRadius)
     {

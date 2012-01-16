@@ -17,28 +17,79 @@ import uk.ac.cranfield.java.assignment.view.component.DimensionSlider;
 
 import com.jgoodies.forms.layout.FormLayout;
 
-
+/**
+ * This class extends {@link DisplayDialog} Represents the dialog component for Circle.
+ * Provides the interface for the user to select number of objects and shapes boundary dimensions.
+ * @author Mateusz Golab
+ * @version 1.0
+ * @see DisplayDialog
+ */
 @SuppressWarnings("serial")
 public class CircleDisplayDialog extends DisplayDialog
 {
     
+    /**
+     * Major tick interval for Circle
+     */
     private static int MAJOR_TICK = 100;
+    
+    /**
+     * Minor tick interval for Circle.
+     */
     private static int MINOR_TICK = 50;
+    
+    /**
+     * minimum radius label
+     */
     private JLabel minRadiusLabel;
+    
+    /**
+     * maximum radius label
+     */
     private JLabel maxRadiusLabel;
+    
+    /**
+     * The instance of DimensionSlider for setting the minimum radius.
+     */
     private DimensionSlider minRadius;
+    
+    /**
+     * The instance of DimensionSlider for setting the maximum radius.
+     */
     private DimensionSlider maxRadius;
+    
+    /**
+     * minimum radius text field for showing exact number
+     */
     private JTextField minRadiusText;
+    
+    /**
+     * maximum radius text field for showing exact number
+     */
     private JTextField maxRadiusText;
+    
+    /**
+     * Instance of bean containing user choices from the dialog.
+     */
     private CircleDialogInfo info;
     
+    
+    /**
+     * This constructor creates new dialog for Circle shape
+     * Initializes Circle bean (CircleDialogInfo)
+     * @param frame dialog's parent frame
+     * @param title the title of the dialog
+     * @param dialogClient Circle dialog client
+     */
     public CircleDisplayDialog(Frame frame, String title, DialogClient dialogClient)
     {
         super(frame, title, dialogClient);
         this.info = new CircleDialogInfo();
     }
     
-    
+    /**
+     * Creates and sets the form layout for the dialog components.
+     */
     @Override
     protected void setLayout()
     {
@@ -48,13 +99,16 @@ public class CircleDisplayDialog extends DisplayDialog
         
     }
     
+    /**
+     * Creates Circle dialog components
+     */
     @Override
     protected void create()
     {
         super.create();
         
-        minRadiusLabel = new JLabel("Minimal radius :");
-        maxRadiusLabel = new JLabel("Maximal radius :");
+        minRadiusLabel = new JLabel("Minimum radius :");
+        maxRadiusLabel = new JLabel("Maximum radius :");
         
         minRadius = new DimensionSlider(1, MAX_RADIUS, 1, MINOR_TICK, MAJOR_TICK);
         maxRadius = new DimensionSlider(1, MAX_RADIUS, MAX_RADIUS / 2, MINOR_TICK, MAJOR_TICK);
@@ -64,6 +118,10 @@ public class CircleDisplayDialog extends DisplayDialog
         
     }
     
+    /**
+     * Initializes the main panel of the dialog.
+     * Adds all components to the panel.
+     */
     @Override
     protected void init()
     {
@@ -78,6 +136,9 @@ public class CircleDisplayDialog extends DisplayDialog
         
     }
     
+    /**
+     * This method is responsible for changing dialog state to the initial one.
+     */
     @Override
     public void reset()
     {
@@ -90,6 +151,10 @@ public class CircleDisplayDialog extends DisplayDialog
         maxRadiusText.setText(Double.toString(maxRadius.getValue()));
     }
     
+    
+    /**
+     * This method adds listeners to the dialog components.
+     */
     @Override
     protected void addListeners()
     {
@@ -99,6 +164,10 @@ public class CircleDisplayDialog extends DisplayDialog
         maxRadius.addChangeListener(this);
     }
     
+    /**
+     * This method is the implementation of ChangeListener interface method.
+     * It updates the text fields with the values selected on the sliders.
+     */
     @Override
     public void stateChanged(ChangeEvent e)
     {
@@ -114,10 +183,20 @@ public class CircleDisplayDialog extends DisplayDialog
         }
     }
     
-    
+    /**
+     * This private class implements {@link ActionListener}.
+     * Initializes Circle bean with values selected by the user.
+     * @author Mateusz Golab
+     * @version 1.0
+     * @see ActionListener
+     */
     private class OkButtonAction implements ActionListener
     {
         
+        /**
+         * This method sets Circle bean after successfully checked boundary values.
+         * Prints the error if boundaries are not set properly.
+         */
         @Override
         public void actionPerformed(ActionEvent e)
         {
@@ -138,6 +217,10 @@ public class CircleDisplayDialog extends DisplayDialog
             
         }
         
+        /**
+         * Checks if minimum dimension is less than maximum
+         * @return the result of checking
+         */
         private boolean areRangesOk()
         {
             if (minRadius.getValue() >= maxRadius.getValue())

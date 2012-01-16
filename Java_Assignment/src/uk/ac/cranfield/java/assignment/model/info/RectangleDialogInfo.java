@@ -12,28 +12,28 @@ public class RectangleDialogInfo extends DialogInfo
 {
     
     /**
-     * Represents minimal length value.
+     * Represents minimum length value.
      */
     private Integer minLength;
     
     /**
-     * Represents maximal length value.
+     * Represents maximum length value.
      */
     private Integer maxLength;
     
     /**
-     * Represents minimal width value.
+     * Represents minimum width value.
      */
     private Integer minWidth;
     
     /**
-     * Represents maximal width value.
+     * Represents maximum width value.
      */
     private Integer maxWidth;
     
     /**
-     * Returns minimal length value.
-     * @return the minimal length value.
+     * Returns minimum length value.
+     * @return the minimum length value.
      */
     public final Integer getMinLength()
     {
@@ -42,8 +42,8 @@ public class RectangleDialogInfo extends DialogInfo
     
     
     /**
-     * Sets the minimal length value.
-     * @param minLength the minimal length value to set
+     * Sets the minimum length value.
+     * @param minLength the minimum length value to set
      */
     public final void setMinLength(final Integer minLength)
     {
@@ -52,8 +52,8 @@ public class RectangleDialogInfo extends DialogInfo
     
     
     /**
-     * Returns maximal length value.
-     * @return the maximal length value.
+     * Returns maximum length value.
+     * @return the maximum length value.
      */
     public final Integer getMaxLength()
     {
@@ -62,8 +62,8 @@ public class RectangleDialogInfo extends DialogInfo
     
     
     /**
-     * Sets the maximal length value.
-     * @param maxLength the maximal length value to set
+     * Sets the maximum length value.
+     * @param maxLength the maximum length value to set
      */
     public final void setMaxLength(final Integer maxLength)
     {
@@ -72,8 +72,8 @@ public class RectangleDialogInfo extends DialogInfo
     
     
     /**
-     * Returns minimal width value.
-     * @return the minimal width value.
+     * Returns minimum width value.
+     * @return the minimum width value.
      */
     public final Integer getMinWidth()
     {
@@ -82,8 +82,8 @@ public class RectangleDialogInfo extends DialogInfo
     
     
     /**
-     * Sets the minimal width value.
-     * @param minWidth the minimal width value to set
+     * Sets the minimum width value.
+     * @param minWidth the minimum width value to set
      */
     public final void setMinWidth(final Integer minWidth)
     {
@@ -92,8 +92,8 @@ public class RectangleDialogInfo extends DialogInfo
     
     
     /**
-     * Returns the maximal width value.
-     * @return the maximal width value.
+     * Returns the maximum width value.
+     * @return the maximum width value.
      */
     public final Integer getMaxWidth()
     {
@@ -102,8 +102,8 @@ public class RectangleDialogInfo extends DialogInfo
     
     
     /**
-     * Sets the maximal width value.
-     * @param maxWidth the maximal width value to set
+     * Sets the maximum width value.
+     * @param maxWidth the maximum width value to set
      */
     public final void setMaxWidth(final Integer maxWidth)
     {

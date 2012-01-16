@@ -17,31 +17,119 @@ import uk.ac.cranfield.java.assignment.view.component.DimensionSlider;
 
 import com.jgoodies.forms.layout.FormLayout;
 
-
+/**
+ * This class extends {@link DisplayDialog} Represents the dialog component for Rectangle.
+ * Provides the interface for the user to select number of objects and shapes boundary dimensions.
+ * @author Mateusz Golab
+ * @version 1.0
+ * @see DisplayDialog
+ */
 @SuppressWarnings("serial")
 public class RectangleDisplayDialog extends DisplayDialog
 {
     
+    /**
+     * Maximum width for Rectangle
+     */
     private static int MAX_WIDTH = 801;
+    
+    /**
+     * Maximum height for Rectangle
+     */
     private static int MAX_HEIGHT = 601;
+    
+    /**
+     * Major height tick interval
+     */
     private static int MAJOR_HEIGHT_TICK = 100;
+    
+    /**
+     * Minor height tick interval
+     */
     private static int MINOR_HEIGHT_TICK = 50;
+    
+    /**
+     * Major width tick interval
+     */
     private static int MAJOR_WIDTH_TICK = 200;
+    
+    /**
+     * Minor width tick interval
+     */
     private static int MINOR_WIDTH_TICK = 100;
+    
+    /**
+     * Minimum length label
+     */
     private JLabel minLengthLabel;
+    
+    /**
+     * Maximum length label
+     */
     private JLabel maxLengthLabel;
+    
+    /**
+     * Minimum width label
+     */
     private JLabel minWidthLabel;
+    
+    /**
+     * Maximum width label
+     */
     private JLabel maxWidthLabel;
+    
+    /**
+     * The instance of DimensionSlider for setting the minimum length.
+     */
     private DimensionSlider minLength;
+    
+    /**
+     * The instance of DimensionSlider for setting the maximum length.
+     */
     private DimensionSlider maxLength;
+    
+    /**
+     * The instance of DimensionSlider for setting the minimum width.
+     */
     private DimensionSlider minWidth;
+    
+    /**
+     * The instance of DimensionSlider for setting the maximum width.
+     */
     private DimensionSlider maxWidth;
+    
+    /**
+     * minimum length text field for showing exact number
+     */
     private JTextField minLengthText;
+    
+    /**
+     * maximum length text field for showing exact number
+     */
     private JTextField maxLengthText;
+    
+    /**
+     * minimum width text field for showing exact number
+     */
     private JTextField minWidthText;
+    
+    /**
+     * minimum length text field for showing exact number
+     */
     private JTextField maxWidthText;
+    
+    /**
+     * Instance of bean containing user choices from the dialog.
+     */
     private RectangleDialogInfo info;
     
+    /**
+     * This constructor creates new dialog for Rectangle shape
+     * Initializes Rectangle bean (RectangleDialogInfo)
+     * @param frame dialog's parent frame
+     * @param title the title of the dialog
+     * @param dialogClient Rectangle dialog client
+     */
     public RectangleDisplayDialog(Frame frame, String title, DialogClient dialogClient)
     {
         super(frame, title, dialogClient);
@@ -49,6 +137,9 @@ public class RectangleDisplayDialog extends DisplayDialog
         
     }
     
+    /**
+     * Creates and sets the form layout for the dialog components.
+     */
     @Override
     protected void setLayout()
     {
@@ -58,15 +149,18 @@ public class RectangleDisplayDialog extends DisplayDialog
         
     }
     
+    /**
+     * Creates Rectangle dialog components
+     */
     @Override
     protected void create()
     {
         super.create();
         
-        minLengthLabel = new JLabel("Minimal length :");
-        maxLengthLabel = new JLabel("Maximal length :");
-        minWidthLabel = new JLabel("Minimal width :");
-        maxWidthLabel = new JLabel("Maximal width :");
+        minLengthLabel = new JLabel("Minimum length :");
+        maxLengthLabel = new JLabel("Maximum length :");
+        minWidthLabel = new JLabel("Minimum width :");
+        maxWidthLabel = new JLabel("Maximum width :");
         
         minLength = new DimensionSlider(1, MAX_HEIGHT, 1, MINOR_HEIGHT_TICK, MAJOR_HEIGHT_TICK);
         maxLength = new DimensionSlider(1, MAX_HEIGHT, MAX_HEIGHT / 2, MINOR_HEIGHT_TICK, MAJOR_HEIGHT_TICK);
@@ -81,6 +175,10 @@ public class RectangleDisplayDialog extends DisplayDialog
         
     }
     
+    /**
+     * Initializes the main panel of the dialog.
+     * Adds all components to the panel.
+     */
     @Override
     protected void init()
     {
@@ -103,6 +201,9 @@ public class RectangleDisplayDialog extends DisplayDialog
         
     }
     
+    /**
+     * This method is responsible for changing dialog state to the initial one.
+     */
     @Override
     public void reset()
     {
@@ -119,6 +220,10 @@ public class RectangleDisplayDialog extends DisplayDialog
         maxWidthText.setText(Double.toString(maxWidth.getValue()));
     }
     
+    
+    /**
+     * This method adds listeners to the dialog components.
+     */
     @Override
     protected void addListeners()
     {
@@ -130,6 +235,10 @@ public class RectangleDisplayDialog extends DisplayDialog
         maxWidth.addChangeListener(this);
     }
     
+    /**
+     * This method is the implementation of ChangeListener interface method.
+     * It updates the text fields with the values selected on the sliders.
+     */
     @Override
     public void stateChanged(ChangeEvent e)
     {
@@ -149,9 +258,20 @@ public class RectangleDisplayDialog extends DisplayDialog
         }
     }
     
+    /**
+     * This private class implements {@link ActionListener}.
+     * Initializes Rectangle bean with values selected by the user.
+     * @author Mateusz Golab
+     * @version 1.0
+     * @see ActionListener
+     */
     private class OkButtonAction implements ActionListener
     {
         
+        /**
+         * This method sets Rectangle bean after successfully checked boundary values.
+         * Prints the error if boundaries are not set properly.
+         */
         @Override
         public void actionPerformed(ActionEvent e)
         {
@@ -174,6 +294,10 @@ public class RectangleDisplayDialog extends DisplayDialog
             
         }
         
+        /**
+         * Checks if minimum dimension is less than maximum
+         * @return the result of checking
+         */
         private boolean areRangesOk()
         {
             if ((minLength.getValue() >= maxLength.getValue()) || (minWidth.getValue() >= maxWidth.getValue()))
