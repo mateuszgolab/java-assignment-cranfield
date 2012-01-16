@@ -5,7 +5,7 @@ package uk.ac.cranfield.java.assignment.model.info;
  * Represents minor and major radius boundary values for the Ellipse objects.
  * @author Mateusz Golab
  * @version 1.0
- * @see
+ * @see DialogInfo
  */
 public class EllipseDialogInfo extends DialogInfo
 {

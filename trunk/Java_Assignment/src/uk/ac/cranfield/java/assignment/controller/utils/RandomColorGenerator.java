@@ -4,7 +4,7 @@ import java.awt.Color;
 
 /**
  * This class provides random Colors.
- * Uses {@link} RandomNumbersGenerator.
+ * Uses {@link RandomNumbersGenerator}.
  * @author Mateusz Golab
  * @version 1.0
  */

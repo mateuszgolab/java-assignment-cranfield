@@ -6,7 +6,7 @@ package uk.ac.cranfield.java.assignment.model.info;
  * Represents length and width boundary values for the Rectangle objects.
  * @author Mateusz Golab
  * @version 1.0
- * @see
+ * @see RectangleDialogInfo
  */
 public class RectangleDialogInfo extends DialogInfo
 {

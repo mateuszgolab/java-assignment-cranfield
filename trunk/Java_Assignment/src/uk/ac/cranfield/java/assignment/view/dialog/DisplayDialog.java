@@ -25,7 +25,7 @@ import com.jgoodies.forms.layout.FormLayout;
  * This abstract class extends {@link NDialog} Provides common components for all shapes dialog.
  * @author Mateusz Golab
  * @version 1.0
- * @see NDialog, ChangeListener
+ * @see NDialog , ChangeListener
  */
 @SuppressWarnings("serial")
 public abstract class DisplayDialog extends NDialog implements ChangeListener

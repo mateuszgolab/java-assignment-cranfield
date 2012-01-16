@@ -16,7 +16,7 @@ import uk.ac.cranfield.java.assignment.view.panel.DrawPanel;
  * Extends {@link JFrame} and implements {@link WindowListener}.
  * @author Mateusz Golab
  * @version 1.0
- * @see JFrame, WindowListener
+ * @see JFrame , WindowListener
  */
 @SuppressWarnings("serial")
 public class MainFrame extends JFrame implements WindowStateListener

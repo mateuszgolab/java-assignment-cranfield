@@ -9,7 +9,7 @@ import java.io.Serializable;
  * It implements the area method of the abstract class MyShape.
  * @author Mateusz Golab
  * @version 1.0
- * @see Ellipse, MyShape
+ * @see Ellipse , MyShape
  */
 public class Circle extends Ellipse implements Serializable
 {
@@ -25,7 +25,7 @@ public class Circle extends Ellipse implements Serializable
      * @param radius double representing the radius of the Circle.
      * @param x integer representing the x - coordinate of the centre of Circle.
      * @param y integer representing the y - coordinate of the centre of Circle.
-     * @param color represents the color of the Circle.
+     * @param c represents the color of the Circle.
      */
     public Circle(double radius, int x, int y, Color c)
     {
