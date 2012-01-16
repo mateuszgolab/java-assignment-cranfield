@@ -64,8 +64,7 @@ public abstract class ShapeController
     }
     
     /**
-     * This method is the shapes object accessor.
-     * It can be called from many threads so has to be synchronised.
+     * This method is the shapes object accessor. It can be called from many threads so has to be synchronised.
      * @return current shapes
      */
     public synchronized MyShape[] getShapes()

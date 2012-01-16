@@ -37,16 +37,24 @@ public class Rectangle extends MyShape implements Serializable
         this.color = color;
     }
     
-    /** double representing the width of the Rectangle. */
+    /**
+     * double representing the width of the Rectangle.
+     */
     private double width;
     
-    /** double representing the height of the Rectangle. */
+    /**
+     * double representing the height of the Rectangle.
+     */
     private double height;
     
-    /** integer representing the x - coordinate of the centre of Rectangle. */
+    /**
+     * integer representing the x - coordinate of the centre of Rectangle.
+     */
     private int x;
     
-    /** integer representing the y - coordinate of the centre of Rectangle. */
+    /**
+     * integer representing the y - coordinate of the centre of Rectangle.
+     */
     private int y;
     
     /**

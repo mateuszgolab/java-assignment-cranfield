@@ -1,0 +1,75 @@
+<class-diagram version="1.0.6" icons="true" automaticImage="JPEG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.action.menu.FileMenuAction" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/action/menu/FileMenuAction.java" 
+    binary="false">    
+    <position height="115" width="244" x="151" y="164"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.action.menu.OpenFileAction" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/action/menu/OpenFileAction.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="135" y="420"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.action.menu.SaveFileAction" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/action/menu/SaveFileAction.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="421" y="423"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="4" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.action.menu.ShapeMenuAction" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/action/menu/ShapeMenuAction.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="269" y="69"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.dialog.CircleDialogClient" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/dialog/CircleDialogClient.java" binary="false">    
+    <position height="131" width="209" x="465" y="159"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" 
+    name="uk.ac.cranfield.java.assignment.controller.dialog.EllipseDialogClient" project="Java_Assignment" 
+    file="/Java_Assignment/src/uk/ac/cranfield/java/assignment/controller/dialog/EllipseDialogClient.java" 
+    binary="false">    
+    <position height="131" width="209" x="682" y="254"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <generalization id="7">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="8">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
