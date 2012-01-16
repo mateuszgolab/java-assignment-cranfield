@@ -5,8 +5,8 @@ import java.io.Serializable;
 
 
 /**
- * The class Ellipse represents a geometric shape. An Ellipse is defined by
- * its major radius, minor radius and centre (x,y).
+ * The class Ellipse represents a geometric shape.
+ * An Ellipse is defined by its major radius, minor radius and centre (x,y).
  * It implements the area method of the abstract base class MyShape.
  * @author Mateusz Golab
  * @version 1.0
@@ -16,7 +16,7 @@ public class Ellipse extends MyShape implements Serializable
 {
     
     /**
-     * 
+     * serial UID
      */
     private static final long serialVersionUID = -5303480891724484467L;
     
@@ -32,6 +32,9 @@ public class Ellipse extends MyShape implements Serializable
     /** integer representing the y - coordinate of the centre of the Ellipse */
     protected int y;
     
+    /**
+     * Represents the color of the Ellipse.
+     */
     protected Color color;
     
     /**
@@ -41,6 +44,7 @@ public class Ellipse extends MyShape implements Serializable
      * @param majorRadius double representing the major radius of the Ellipse.
      * @param x integer representing the x - coordinate of the centre of Ellipse.
      * @param y integer representing the y - coordinate of the centre of Ellipse.
+     * @param color represents the color of the Ellipse.
      */
     public Ellipse(double minorRadius, double majorRadius, int x, int y, Color color)
     {
@@ -52,8 +56,8 @@ public class Ellipse extends MyShape implements Serializable
     }
     
     /**
-     * Implementation for the abstract method area of the base class MyShape. A
-     * Circle's area is the product of pi number and its squared radius.
+     * Implementation for the abstract method area of the base class MyShape.
+     * A Ellipse's area is the product of pi number and its minor and major radius.
      */
     @Override
     public double area()
@@ -63,7 +67,8 @@ public class Ellipse extends MyShape implements Serializable
     
     
     /**
-     * @return the x - coordinate of the Ellipse's centre
+     * Returns the x - coordinate of the Ellipse's centre.
+     * @return the x - coordinate of the Ellipse's centre.
      */
     public final int getX()
     {
@@ -72,15 +77,17 @@ public class Ellipse extends MyShape implements Serializable
     
     
     /**
-     * @param x the x to set
+     * Sets the x - coordinate of the Ellipse's centre.
+     * @param x the x - coordinate to set
      */
-    public final void setX(int x)
+    public final void setX(final int x)
     {
         this.x = x;
     }
     
     
     /**
+     * Returns the y - coordinate of the Ellipse's centre.
      * @return the y - coordinate of the Ellipse's centre
      */
     public final int getY()
@@ -90,9 +97,10 @@ public class Ellipse extends MyShape implements Serializable
     
     
     /**
-     * @param y the y to set
+     * Sets the y - coordinate of the Ellipse's centre.
+     * @param y the y - coordinate to set
      */
-    public final void setY(int y)
+    public final void setY(final int y)
     {
         this.y = y;
     }
@@ -117,6 +125,7 @@ public class Ellipse extends MyShape implements Serializable
     
     
     /**
+     * Returns the minor radius of the Ellipse.
      * @return the minorRadius of the Ellipse
      */
     public final double getMinorRadius()
@@ -126,15 +135,17 @@ public class Ellipse extends MyShape implements Serializable
     
     
     /**
+     * Sets the minor radius of the Ellipse.
      * @param minorRadius the minorRadius to set
      */
-    public void setMinorRadius(double minorRadius)
+    public void setMinorRadius(final double minorRadius)
     {
         this.minorRadius = minorRadius;
     }
     
     
     /**
+     * Returns the major radius of the Ellipse.
      * @return the majorRadius of the Ellipse
      */
     public double getMajorRadius()
@@ -144,15 +155,17 @@ public class Ellipse extends MyShape implements Serializable
     
     
     /**
+     * Sets the major radius of the Ellipse.
      * @param majorRadius the majorRadius to set
      */
-    public void setMajorRadius(double majorRadius)
+    public void setMajorRadius(final double majorRadius)
     {
         this.majorRadius = majorRadius;
     }
     
     /**
-     * @return the color
+     * Returns the color of the Ellipse.
+     * @return the color of the Ellipse.
      */
     public final Color getColor()
     {
@@ -161,9 +174,10 @@ public class Ellipse extends MyShape implements Serializable
     
     
     /**
+     * Sets the color of the Ellipse.
      * @param color the color to set
      */
-    public final void setColor(Color color)
+    public final void setColor(final Color color)
     {
         this.color = color;
     }

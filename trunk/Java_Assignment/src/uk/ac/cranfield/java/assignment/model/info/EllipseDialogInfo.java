@@ -1,16 +1,38 @@
 package uk.ac.cranfield.java.assignment.model.info;
 
-
+/**
+ * This bean class extends {@link DialogInfo}.
+ * Represents minor and major radius boundary values for the Ellipse objects.
+ * @author Mateusz Golab
+ * @version 1.0
+ * @see
+ */
 public class EllipseDialogInfo extends DialogInfo
 {
     
+    /**
+     * Represents minimal minor radius value.
+     */
     private Integer minMinorRadius;
+    
+    /**
+     * Represents maximal minor radius value.
+     */
     private Integer maxMinorRadius;
+    
+    /**
+     * Represents minimal major radius value.
+     */
     private Integer minMajorRadius;
+    
+    /**
+     * Represents maximal major radius value.
+     */
     private Integer maxMajorRadius;
     
     /**
-     * @return the minMinorRadius
+     * Returns the minimal minor radius value.
+     * @return the minimal minor radius value.
      */
     public final Integer getMinMinorRadius()
     {
@@ -18,15 +40,17 @@ public class EllipseDialogInfo extends DialogInfo
     }
     
     /**
-     * @param minMinorRadius the minMinorRadius to set
+     * Sets the minimal minor radius value.
+     * @param minMinorRadius the minimal minor radius value to set
      */
-    public final void setMinMinorRadius(Integer minMinorRadius)
+    public final void setMinMinorRadius(final Integer minMinorRadius)
     {
         this.minMinorRadius = minMinorRadius;
     }
     
     /**
-     * @return the maxMinorRadius
+     * Returns maximal minor radius value.
+     * @return the maximal minor radius value.
      */
     public final Integer getMaxMinorRadius()
     {
@@ -34,15 +58,17 @@ public class EllipseDialogInfo extends DialogInfo
     }
     
     /**
-     * @param maxMinorRadius the maxMinorRadius to set
+     * Sets the maximal minor radius value.
+     * @param maxMinorRadius the maximal minor radius value to set.
      */
-    public final void setMaxMinorRadius(Integer maxMinorRadius)
+    public final void setMaxMinorRadius(final Integer maxMinorRadius)
     {
         this.maxMinorRadius = maxMinorRadius;
     }
     
     /**
-     * @return the minMajorRadius
+     * Returns minimal major radius value.
+     * @return the minimal major radius value.
      */
     public final Integer getMinMajorRadius()
     {
@@ -50,15 +76,17 @@ public class EllipseDialogInfo extends DialogInfo
     }
     
     /**
-     * @param minMajorRadius the minMajorRadius to set
+     * Sets the minimal major radius value.
+     * @param minMajorRadius the minimal major radius value to set.
      */
-    public final void setMinMajorRadius(Integer minMajorRadius)
+    public final void setMinMajorRadius(final Integer minMajorRadius)
     {
         this.minMajorRadius = minMajorRadius;
     }
     
     /**
-     * @return the maxMajorRadius
+     * Returns maximal major radius value.
+     * @return the maximal major radius value.
      */
     public final Integer getMaxMajorRadius()
     {
@@ -66,9 +94,10 @@ public class EllipseDialogInfo extends DialogInfo
     }
     
     /**
-     * @param maxMajorRadius the maxMajorRadius to set
+     * Sets the maximal major radius value.
+     * @param maxMajorRadius the maximal major radius value.
      */
-    public final void setMaxMajorRadius(Integer maxMajorRadius)
+    public final void setMaxMajorRadius(final Integer maxMajorRadius)
     {
         this.maxMajorRadius = maxMajorRadius;
     }

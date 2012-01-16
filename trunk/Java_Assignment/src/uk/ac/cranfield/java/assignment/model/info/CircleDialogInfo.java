@@ -1,14 +1,28 @@
 package uk.ac.cranfield.java.assignment.model.info;
 
-
+/**
+ * This bean class extends {@link DialogInfo}.
+ * Represents radius boundary values for the Circle objects.
+ * @author Mateusz Golab
+ * @version 1.0
+ * @see DialogInfo
+ */
 public class CircleDialogInfo extends DialogInfo
 {
     
+    /**
+     * Represents minimal radius value.
+     */
     private Integer minRadius;
+    
+    /**
+     * Represents maximal radius value.
+     */
     private Integer maxRadius;
     
     /**
-     * @return the minRadius
+     * Returns minimal radius value.
+     * @return the minimal radius value.
      */
     public final Integer getMinRadius()
     {
@@ -16,15 +30,17 @@ public class CircleDialogInfo extends DialogInfo
     }
     
     /**
-     * @param minRadius the minRadius to set
+     * Sets the minimal Radius value.
+     * @param minRadius the minimal radius to set.
      */
-    public final void setMinRadius(Integer minRadius)
+    public final void setMinRadius(final Integer minRadius)
     {
         this.minRadius = minRadius;
     }
     
     /**
-     * @return the maxRadius
+     * Returns maximal radius value.
+     * @return the maximal radius value.
      */
     public final Integer getMaxRadius()
     {
@@ -32,9 +48,10 @@ public class CircleDialogInfo extends DialogInfo
     }
     
     /**
-     * @param maxRadius the maxRadius to set
+     * Sets the maximal radius value.
+     * @param maxRadius the maximal radius value to set.
      */
-    public final void setMaxRadius(Integer maxRadius)
+    public final void setMaxRadius(final Integer maxRadius)
     {
         this.maxRadius = maxRadius;
     }
