@@ -7,11 +7,22 @@ import javax.swing.UIManager.LookAndFeelInfo;
 
 import uk.ac.cranfield.java.assignment.view.frame.MainFrame;
 
-
+/**
+ * The main class of the application.
+ * Provides starting point of the application
+ * @author Mateusz Golab
+ * @version 1.0
+ */
 public class Main
 {
     
-    
+    /**
+     * Main function of the application.
+     * Sets 'Nimbus'Look and feel in separated thread and then creates main application window
+     * Informs by simple dialog if 'Nimbus' LaF not available.
+     * @param args main function arguments
+     * @throws Exception exception
+     */
     public static void main(String[] args) throws Exception
     {
         
