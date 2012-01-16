@@ -22,29 +22,98 @@ import com.jgoodies.forms.layout.FormLayout;
 public class EllipseDisplayDialog extends DisplayDialog
 {
     
+    /**
+     * Major tick interval for Ellipse
+     */
     private static int MAJOR_TICK = 100;
+    
+    /**
+     * Minor tick interval for Ellipse.
+     */
     private static int MINOR_TICK = 50;
+    
+    /**
+     * Minimum minor radius label
+     */
     private JLabel minMinorRadiusLabel;
+    
+    /**
+     * Maximum minor radius label
+     */
     private JLabel maxMinorRadiusLabel;
+    
+    /**
+     * Minimum major radius label
+     */
     private JLabel minMajorRadiusLabel;
+    
+    /**
+     * Maximum major radius label
+     */
     private JLabel maxMajorRadiusLabel;
+    
+    
+    /**
+     * The instance of DimensionSlider for setting the minimum minor radius.
+     */
     private DimensionSlider minMinorRadius;
+    
+    /**
+     * The instance of DimensionSlider for setting the maximum minor radius.
+     */
     private DimensionSlider maxMinorRadius;
+    
+    /**
+     * The instance of DimensionSlider for setting the minimum major radius.
+     */
     private DimensionSlider minMajorRadius;
+    
+    /**
+     * The instance of DimensionSlider for setting the maximum major radius.
+     */
     private DimensionSlider maxMajorRadius;
+    
+    /**
+     * minimum minor radius text field for showing exact number
+     */
     private JTextField minMinorRadiusText;
+    
+    /**
+     * maximum minor radius text field for showing exact number
+     */
     private JTextField maxMinorRadiusText;
+    
+    /**
+     * minimum major radius text field for showing exact number
+     */
     private JTextField minMajorRadiusText;
+    
+    /**
+     * maximum major radius text field for showing exact number
+     */
     private JTextField maxMajorRadiusText;
+    
+    /**
+     * Instance of bean containing user choices from the dialog.
+     */
     private EllipseDialogInfo info;
     
+    /**
+     * This constructor creates new dialog for Ellipse shape
+     * Initializes Ellipse bean (EllipseDialogInfo)
+     * @param frame dialog's parent frame
+     * @param title the title of the dialog
+     * @param dialogClient Ellipse dialog client
+     */
     public EllipseDisplayDialog(Frame frame, String title, DialogClient dialogClient)
     {
         super(frame, title, dialogClient);
         this.info = new EllipseDialogInfo();
     }
     
-    
+    /**
+     * Creates and sets the form layout for the dialog components.
+     */
     @Override
     protected void setLayout()
     {
@@ -54,16 +123,19 @@ public class EllipseDisplayDialog extends DisplayDialog
         
     }
     
+    /**
+     * Creates Ellipse dialog components
+     */
     @Override
     protected void create()
     {
         super.create();
         
         
-        minMinorRadiusLabel = new JLabel("Minimal minor radius :");
-        maxMinorRadiusLabel = new JLabel("Maximal minor radius :");
-        minMajorRadiusLabel = new JLabel("Minimal major radius :");
-        maxMajorRadiusLabel = new JLabel("Maximal major radius :");
+        minMinorRadiusLabel = new JLabel("Minimum minor radius :");
+        maxMinorRadiusLabel = new JLabel("Maximum minor radius :");
+        minMajorRadiusLabel = new JLabel("Minimum major radius :");
+        maxMajorRadiusLabel = new JLabel("Maximum major radius :");
         
         
         minMinorRadius = new DimensionSlider(1, MAX_RADIUS, 1, MINOR_TICK, MAJOR_TICK);
@@ -79,6 +151,10 @@ public class EllipseDisplayDialog extends DisplayDialog
         
     }
     
+    /**
+     * Initializes the main panel of the dialog.
+     * Adds all components to the panel.
+     */
     @Override
     protected void init()
     {
@@ -101,6 +177,9 @@ public class EllipseDisplayDialog extends DisplayDialog
         
     }
     
+    /**
+     * This method is responsible for changing dialog state to the initial one.
+     */
     @Override
     public void reset()
     {
@@ -117,7 +196,9 @@ public class EllipseDisplayDialog extends DisplayDialog
         maxMajorRadiusText.setText(Double.toString(maxMajorRadius.getValue()));
     }
     
-    
+    /**
+     * This method adds listeners to the dialog components.
+     */
     @Override
     protected void addListeners()
     {
@@ -129,6 +210,10 @@ public class EllipseDisplayDialog extends DisplayDialog
         maxMajorRadius.addChangeListener(this);
     }
     
+    /**
+     * This method is the implementation of ChangeListener interface method.
+     * It updates the text fields with the values selected on the sliders.
+     */
     @Override
     public void stateChanged(ChangeEvent e)
     {
@@ -148,9 +233,20 @@ public class EllipseDisplayDialog extends DisplayDialog
         }
     }
     
+    /**
+     * This private class implements {@link ActionListener}.
+     * Initializes Ellipse bean with values selected by the user.
+     * @author Mateusz Golab
+     * @version 1.0
+     * @see ActionListener
+     */
     private class OkButtonAction implements ActionListener
     {
         
+        /**
+         * This method sets Ellipse bean after successfully checked boundary values.
+         * Prints the error if boundaries are not set properly.
+         */
         @Override
         public void actionPerformed(ActionEvent e)
         {
@@ -173,6 +269,10 @@ public class EllipseDisplayDialog extends DisplayDialog
             
         }
         
+        /**
+         * Checks if minimum dimension is less than maximum
+         * @return the result of checking
+         */
         private boolean areRangesOk()
         {
             if ((minMinorRadius.getValue() >= maxMinorRadius.getValue())

@@ -11,18 +11,18 @@ public class CircleDialogInfo extends DialogInfo
 {
     
     /**
-     * Represents minimal radius value.
+     * Represents minimum radius value.
      */
     private Integer minRadius;
     
     /**
-     * Represents maximal radius value.
+     * Represents maximum radius value.
      */
     private Integer maxRadius;
     
     /**
-     * Returns minimal radius value.
-     * @return the minimal radius value.
+     * Returns minimum radius value.
+     * @return the minimum radius value.
      */
     public final Integer getMinRadius()
     {
@@ -30,8 +30,8 @@ public class CircleDialogInfo extends DialogInfo
     }
     
     /**
-     * Sets the minimal Radius value.
-     * @param minRadius the minimal radius to set.
+     * Sets the minimum Radius value.
+     * @param minRadius the minimum radius to set.
      */
     public final void setMinRadius(final Integer minRadius)
     {
@@ -39,8 +39,8 @@ public class CircleDialogInfo extends DialogInfo
     }
     
     /**
-     * Returns maximal radius value.
-     * @return the maximal radius value.
+     * Returns maximum radius value.
+     * @return the maximum radius value.
      */
     public final Integer getMaxRadius()
     {
@@ -48,8 +48,8 @@ public class CircleDialogInfo extends DialogInfo
     }
     
     /**
-     * Sets the maximal radius value.
-     * @param maxRadius the maximal radius value to set.
+     * Sets the maximum radius value.
+     * @param maxRadius the maximum radius value to set.
      */
     public final void setMaxRadius(final Integer maxRadius)
     {
