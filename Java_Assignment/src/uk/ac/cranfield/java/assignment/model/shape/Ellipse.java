@@ -20,16 +20,24 @@ public class Ellipse extends MyShape implements Serializable
      */
     private static final long serialVersionUID = -5303480891724484467L;
     
-    /** double representing the minor radius of the Ellipse. */
+    /**
+     * double representing the minor radius of the Ellipse.
+     */
     protected double minorRadius;
     
-    /** double representing the major radius of the Ellipse. */
+    /**
+     * double representing the major radius of the Ellipse.
+     */
     protected double majorRadius;
     
-    /** integer representing the x - coordinate of the centre of the Ellipse */
+    /**
+     * integer representing the x - coordinate of the centre of the Ellipse
+     */
     protected int x;
     
-    /** integer representing the y - coordinate of the centre of the Ellipse */
+    /**
+     * integer representing the y - coordinate of the centre of the Ellipse
+     */
     protected int y;
     
     /**
